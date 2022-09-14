@@ -1,0 +1,7 @@
+C:\Users\Cheburashka\Desktop\Учеба\ASD\lb1\asd_q1_v13\asd_q1_v13\bin\Debug\asd_q1_v13.exe.config
+C:\Users\Cheburashka\Desktop\Учеба\ASD\lb1\asd_q1_v13\asd_q1_v13\bin\Debug\asd_q1_v13.exe
+C:\Users\Cheburashka\Desktop\Учеба\ASD\lb1\asd_q1_v13\asd_q1_v13\bin\Debug\asd_q1_v13.pdb
+C:\Users\Cheburashka\Desktop\Учеба\ASD\lb1\asd_q1_v13\asd_q1_v13\obj\Debug\asd_q1_v13.csproj.AssemblyReference.cache
+C:\Users\Cheburashka\Desktop\Учеба\ASD\lb1\asd_q1_v13\asd_q1_v13\obj\Debug\asd_q1_v13.csproj.CoreCompileInputs.cache
+C:\Users\Cheburashka\Desktop\Учеба\ASD\lb1\asd_q1_v13\asd_q1_v13\obj\Debug\asd_q1_v13.exe
+C:\Users\Cheburashka\Desktop\Учеба\ASD\lb1\asd_q1_v13\asd_q1_v13\obj\Debug\asd_q1_v13.pdb
