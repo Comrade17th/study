@@ -161,9 +161,16 @@ namespace asd_lb4_stack_queue
             while (!f.EndOfStream)
             {
                 string s = f.ReadLine();
-                Console.WriteLine(isGood(s));
+                if (isGood(s))
+                    rightSequence.Add(s);
+                else
+                    wrongSequence.Add(s);
             }
             f.Close();
+            foreach (string s in rightSequence)
+                Console.WriteLine("right" + s);
+            foreach (string s in wrongSequence)
+                Console.WriteLine("wrong " + s);
             Console.ReadKey();
         }
     }
