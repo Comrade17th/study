@@ -54,6 +54,7 @@ namespace asd_lb5_polis_deck
             for (int i = 0; i < test.Length; i++)
                 Console.WriteLine($"{test[i]} = {calcPolis(test[i])}");
             Console.ReadKey();
+
         }
     }
 }
