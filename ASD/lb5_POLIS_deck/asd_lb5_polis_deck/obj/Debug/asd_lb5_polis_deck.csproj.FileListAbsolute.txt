@@ -1,0 +1,8 @@
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb5_POLIS_deck\asd_lb5_polis_deck\bin\Debug\asd_lb5_polis_deck.exe.config
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb5_POLIS_deck\asd_lb5_polis_deck\bin\Debug\asd_lb5_polis_deck.exe
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb5_POLIS_deck\asd_lb5_polis_deck\bin\Debug\asd_lb5_polis_deck.pdb
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb5_POLIS_deck\asd_lb5_polis_deck\obj\Debug\asd_lb5_polis_deck.csproj.AssemblyReference.cache
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb5_POLIS_deck\asd_lb5_polis_deck\obj\Debug\asd_lb5_polis_deck.csproj.SuggestedBindingRedirects.cache
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb5_POLIS_deck\asd_lb5_polis_deck\obj\Debug\asd_lb5_polis_deck.csproj.CoreCompileInputs.cache
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb5_POLIS_deck\asd_lb5_polis_deck\obj\Debug\asd_lb5_polis_deck.exe
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb5_POLIS_deck\asd_lb5_polis_deck\obj\Debug\asd_lb5_polis_deck.pdb
