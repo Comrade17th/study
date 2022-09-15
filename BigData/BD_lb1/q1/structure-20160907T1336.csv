@@ -1,0 +1,6 @@
+"field name,""english description"",""russian description"",format"
+"name,name,""Название точки Название сети"",string"
+address,address,Адрес,string
+type,type,Категория,string
+"coordinates,coordinates,""Координаты объекта с точностью минимум до 13 знака*, lat"",string"
+"coordinates,coordinates,""Координаты объекта с точностью минимум до 13 знака*, Ing"",string"

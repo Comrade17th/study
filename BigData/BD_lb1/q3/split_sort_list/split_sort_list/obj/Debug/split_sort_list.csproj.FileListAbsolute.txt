@@ -1,0 +1,7 @@
+C:\Users\Cheburashka\Desktop\Учеба\study\BigData\BD_lb1\q3\split_sort_list\split_sort_list\bin\Debug\split_sort_list.exe.config
+C:\Users\Cheburashka\Desktop\Учеба\study\BigData\BD_lb1\q3\split_sort_list\split_sort_list\bin\Debug\split_sort_list.exe
+C:\Users\Cheburashka\Desktop\Учеба\study\BigData\BD_lb1\q3\split_sort_list\split_sort_list\bin\Debug\split_sort_list.pdb
+C:\Users\Cheburashka\Desktop\Учеба\study\BigData\BD_lb1\q3\split_sort_list\split_sort_list\obj\Debug\split_sort_list.csproj.AssemblyReference.cache
+C:\Users\Cheburashka\Desktop\Учеба\study\BigData\BD_lb1\q3\split_sort_list\split_sort_list\obj\Debug\split_sort_list.csproj.CoreCompileInputs.cache
+C:\Users\Cheburashka\Desktop\Учеба\study\BigData\BD_lb1\q3\split_sort_list\split_sort_list\obj\Debug\split_sort_list.exe
+C:\Users\Cheburashka\Desktop\Учеба\study\BigData\BD_lb1\q3\split_sort_list\split_sort_list\obj\Debug\split_sort_list.pdb

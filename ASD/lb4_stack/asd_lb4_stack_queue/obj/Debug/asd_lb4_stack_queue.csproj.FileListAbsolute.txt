@@ -1,0 +1,8 @@
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb4_stack\asd_lb4_stack_queue\bin\Debug\asd_lb4_stack_queue.exe.config
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb4_stack\asd_lb4_stack_queue\bin\Debug\asd_lb4_stack_queue.exe
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb4_stack\asd_lb4_stack_queue\bin\Debug\asd_lb4_stack_queue.pdb
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb4_stack\asd_lb4_stack_queue\obj\Debug\asd_lb4_stack_queue.csproj.AssemblyReference.cache
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb4_stack\asd_lb4_stack_queue\obj\Debug\asd_lb4_stack_queue.csproj.SuggestedBindingRedirects.cache
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb4_stack\asd_lb4_stack_queue\obj\Debug\asd_lb4_stack_queue.csproj.CoreCompileInputs.cache
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb4_stack\asd_lb4_stack_queue\obj\Debug\asd_lb4_stack_queue.exe
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb4_stack\asd_lb4_stack_queue\obj\Debug\asd_lb4_stack_queue.pdb
