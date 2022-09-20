@@ -1,0 +1,8 @@
+C:\Users\Comrade\Desktop\Учеба\study\TerVer\birthady\birthday\bin\Debug\birthday.exe.config
+C:\Users\Comrade\Desktop\Учеба\study\TerVer\birthady\birthday\bin\Debug\birthday.exe
+C:\Users\Comrade\Desktop\Учеба\study\TerVer\birthady\birthday\bin\Debug\birthday.pdb
+C:\Users\Comrade\Desktop\Учеба\study\TerVer\birthady\birthday\obj\Debug\birthday.csproj.AssemblyReference.cache
+C:\Users\Comrade\Desktop\Учеба\study\TerVer\birthady\birthday\obj\Debug\birthday.csproj.SuggestedBindingRedirects.cache
+C:\Users\Comrade\Desktop\Учеба\study\TerVer\birthady\birthday\obj\Debug\birthday.csproj.CoreCompileInputs.cache
+C:\Users\Comrade\Desktop\Учеба\study\TerVer\birthady\birthday\obj\Debug\birthday.exe
+C:\Users\Comrade\Desktop\Учеба\study\TerVer\birthady\birthday\obj\Debug\birthday.pdb
