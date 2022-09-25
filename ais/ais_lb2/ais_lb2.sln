@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32505.173
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "ais_lb2", "ais_lb2.pyproj", "{5B8485C9-D3A4-476A-A9E4-CFEA4483DFCF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B8485C9-D3A4-476A-A9E4-CFEA4483DFCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B8485C9-D3A4-476A-A9E4-CFEA4483DFCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {297DFED5-9A46-4868-8E7B-AB2189E96498}
+	EndGlobalSection
+EndGlobal
