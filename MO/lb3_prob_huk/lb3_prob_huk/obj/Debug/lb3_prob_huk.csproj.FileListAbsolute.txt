@@ -1,0 +1,7 @@
+C:\Users\Cheburashka\Desktop\uni\study\MO\lb3_prob_huk\lb3_prob_huk\bin\Debug\lb3_prob_huk.exe.config
+C:\Users\Cheburashka\Desktop\uni\study\MO\lb3_prob_huk\lb3_prob_huk\bin\Debug\lb3_prob_huk.exe
+C:\Users\Cheburashka\Desktop\uni\study\MO\lb3_prob_huk\lb3_prob_huk\bin\Debug\lb3_prob_huk.pdb
+C:\Users\Cheburashka\Desktop\uni\study\MO\lb3_prob_huk\lb3_prob_huk\obj\Debug\lb3_prob_huk.csproj.AssemblyReference.cache
+C:\Users\Cheburashka\Desktop\uni\study\MO\lb3_prob_huk\lb3_prob_huk\obj\Debug\lb3_prob_huk.csproj.CoreCompileInputs.cache
+C:\Users\Cheburashka\Desktop\uni\study\MO\lb3_prob_huk\lb3_prob_huk\obj\Debug\lb3_prob_huk.exe
+C:\Users\Cheburashka\Desktop\uni\study\MO\lb3_prob_huk\lb3_prob_huk\obj\Debug\lb3_prob_huk.pdb
