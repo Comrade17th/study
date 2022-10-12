@@ -62,7 +62,7 @@ namespace asd_lb4_stack_queue
             {
                 data[i] = i;
             }
-            /*
+            
             Random random = new Random();
             for (int i = data.Length - 1; i >= 1; i--)
             {
@@ -72,7 +72,7 @@ namespace asd_lb4_stack_queue
                 data[j] = data[i];
                 data[i] = temp;
             }
-            */
+            
             return data;
         }
 
