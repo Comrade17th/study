@@ -2,10 +2,10 @@
 from random import randint
 
 
-#text_for_mirror = input("Введите строку чтобы отзеркалить ее: ")
-#for elem in reversed(text_for_mirror):
-#    print(elem, end = "")
-#print()
+text_for_mirror = input("Введите строку чтобы отзеркалить ее: ")
+for elem in reversed(text_for_mirror):
+    print(elem, end = "")
+print()
 
 nums1 = []
 nums2 = []
