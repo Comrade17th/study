@@ -20,18 +20,33 @@ namespace lb3_prob_huk
             double x1 = -1, x2 = -1;
             double h = 0.3;
             double eps = 0.01;
-            double f_prev = 0;
+            double f_prev = f(x1, x2);
             int n_now = 1, n_prev = 0;
             int queue = 1; // очередь x1 = 1 or x2 = -1 
             bool scs_now = true, scs_prev = true;
 
-            Console.WriteLine("x1\tx2\th\tf(x)\tf(xn-1)\t\n");
+            Console.WriteLine("x1\t    x2\t    h\t    f(x)\tf(xn-1)\t\n");
             int i = 10;
-            while (h > eps && i > 0)
+            do
             {
-                if (queue == 1)
+                if (queue == 1) // проверяем очередь какого Икса
                 {
-                    if (scs_prev)
+                    if (f(x1 - h, x2) < f_prev)
+                    {
+                        f_prev = f(x1 - h, x2);
+                        x1 -= h;
+                    }
+                    else if (f(x1 + h, x2) < f_prev)
+                    {
+                        f_prev = f(x1 + h, x2);
+                        x1 += h;
+                    }
+                    else
+                    {
+                        h /= 2.0;
+                    }
+                    /*
+                    if (scs_prev) 
                     {
                         x1 += h;
                     }
@@ -41,17 +56,43 @@ namespace lb3_prob_huk
                     }
 
                     //x1 += h;
+                    */
                 }
                 else
                 {
-
+                    if (f(x1, x2 - h) < f_prev)
+                    {
+                        f_prev = f(x1, x2 - h);
+                        x2 -= h;
+                    }
+                    else if (f(x1, x2 + h) < f_prev)
+                    {
+                        f_prev = f(x1, x2 + h);
+                        x2 += h;
+                    }
+                    else
+                    {
+                        h /= 2.0;
+                    }
+                    /*
+                    if (scs_prev)
+                    {
+                        x2 += h;
+                    }
+                    else
+                    {
+                        x2 -= h;
+                    }
+                    */
                 }
-
-                Console.WriteLine($"{x1}\t{x2}\t{h}\t{f(x1,x2)}\t{f_prev}\tn");
+                string output = string.Format("{0:f4} | {1:f4} | {2:f4} | {3:f4} | {4:f4}", x1, x2, h, f(x1, x2), f_prev);
+                Console.WriteLine(output);
+                //Console.WriteLine($"{x1}\t{x2}\t{h}\t{f(x1,x2)}\t{f_prev}\tn");
                 f_prev = f(x1, x2);
                 i--;
                 queue *= -1;
             }
+            while (h > eps);
             Console.ReadKey();
         }
     }
