@@ -5,3 +5,11 @@ C:\Users\Cheburashka\Desktop\uni\study\MO\mo_lb3_huk\mo_lb3_huk\obj\Debug\mo_lb3
 C:\Users\Cheburashka\Desktop\uni\study\MO\mo_lb3_huk\mo_lb3_huk\obj\Debug\mo_lb3_huk.csproj.CoreCompileInputs.cache
 C:\Users\Cheburashka\Desktop\uni\study\MO\mo_lb3_huk\mo_lb3_huk\obj\Debug\mo_lb3_huk.exe
 C:\Users\Cheburashka\Desktop\uni\study\MO\mo_lb3_huk\mo_lb3_huk\obj\Debug\mo_lb3_huk.pdb
+C:\Users\Comrade\Desktop\Учеба\study\MO\mo_lb3_huk\mo_lb3_huk\bin\Debug\mo_lb3_huk.exe.config
+C:\Users\Comrade\Desktop\Учеба\study\MO\mo_lb3_huk\mo_lb3_huk\bin\Debug\mo_lb3_huk.exe
+C:\Users\Comrade\Desktop\Учеба\study\MO\mo_lb3_huk\mo_lb3_huk\bin\Debug\mo_lb3_huk.pdb
+C:\Users\Comrade\Desktop\Учеба\study\MO\mo_lb3_huk\mo_lb3_huk\obj\Debug\mo_lb3_huk.csproj.AssemblyReference.cache
+C:\Users\Comrade\Desktop\Учеба\study\MO\mo_lb3_huk\mo_lb3_huk\obj\Debug\mo_lb3_huk.csproj.SuggestedBindingRedirects.cache
+C:\Users\Comrade\Desktop\Учеба\study\MO\mo_lb3_huk\mo_lb3_huk\obj\Debug\mo_lb3_huk.csproj.CoreCompileInputs.cache
+C:\Users\Comrade\Desktop\Учеба\study\MO\mo_lb3_huk\mo_lb3_huk\obj\Debug\mo_lb3_huk.exe
+C:\Users\Comrade\Desktop\Учеба\study\MO\mo_lb3_huk\mo_lb3_huk\obj\Debug\mo_lb3_huk.pdb
