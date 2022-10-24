@@ -51,8 +51,7 @@ def get_title(url):
 
 def search_html(query):
     arr = []
-    #for j in search(query, tld="co.in", num=5, stop=5, pause=2):
-    for j in search(query, num=5, stop=5, pause=2):
+    for j in search(query):
         arr.append(j)
     return arr
 
