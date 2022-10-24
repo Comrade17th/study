@@ -1,13 +1,24 @@
 import sys
+
+def check_line(the_word, len):
+    is_win = 0 # 0 - nobody win, 1 - firts plr(O) win, 2 - (X) win
+    if(the_word == "O" * len):
+        is_win = 1
+    if (the_word == "X" * len):
+        is_win = 2
+    return(is_win)
+
+
 loop = True # main loop
 
-width = 6
-height = 3
+width = height = 3
+#height = 6
 mas = [0] * height
 for i in range(height):
     mas[i] = ['#'] * width
-print(mas)
+print("X" * 6)
 turn = 1 # O start the game
+is_found_winner = False
 while loop: # the main loop of game
 
 
@@ -53,5 +64,55 @@ while loop: # the main loop of game
     # input end
 
     #check for the winner
-
+    if (is_found_winner == False): # chk verticals
+        i = 0
+        j = 0
+        while i < width:
+            chk_str = ""
+            while j < width:
+                chk_str += mas[i][j]
+                j+=1
+            num_chk = check_line(chk_str, width)
+            i += 1
+            if(num_chk != 0):
+                is_found_winner = true
+                print("Игра закончена!")
+                print("Выиграл игрок " + str(num_chk))
+    if (is_found_winner == False): # chk horizontals
+        i = 0
+        j = 0
+        while i < width:
+            chk_str = ""
+            while j < width:
+                chk_str += mas[j][i]
+                j += 1
+            num_chk = check_line(chk_str, width)
+            i += 1
+            if (num_chk != 0):
+                is_found_winner = True
+                print("Игра закончена!")
+                print("Выиграл игрок " + str(num_chk))
+    if (is_found_winner == False): # check for the diagonals
+        i = 0
+        j = 0
+        chk_str = ""
+        chk_str2 = ""
+        while i < width:
+            chk_str += mas[i][j]
+            chk_str2 += mas[width - 1 - i][width - 1 -j]
+            i+=1
+            j += 1
+        num_chk = check_line(chk_str, width)
+        if (num_chk != 0):
+            is_found_winner = True
+            print("Игра закончена!")
+            print("Выиграл игрок " + str(num_chk))
+        num_chk = check_line(chk_str2, width)
+        if (num_chk != 0):
+            is_found_winner = True
+            print("Игра закончена!")
+            print("Выиграл игрок " + str(num_chk))
+    else:
+        loop = False
+        print("Игра закончена")
     #end check for the winner
