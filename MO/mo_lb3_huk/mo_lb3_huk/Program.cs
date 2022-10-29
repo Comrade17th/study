@@ -107,11 +107,11 @@ namespace mo_lb3_huk
             Dot dt2, dt3;
 
 
-
             //Console.WriteLine(dt2.Output());
             //Dot dt3 = getDt3(dt1, dt2);
             //Console.WriteLine(dt3.Output());
             Console.WriteLine("x1\t   x2\t\th1\th2\tf(x1,x2)");
+            int i = 0;
             do
             {
                 dt2 = findMinDot(dt1, ref h1, ref h2, T);
@@ -119,6 +119,8 @@ namespace mo_lb3_huk
                 {
                     dt3 = getDt3(dt1, dt2);
                     Dot dt4 = findMinDot(dt3, ref h1, ref h2, F);
+                    
+                    
                     if (dt3 == dt4)
                     {
                         dt1 = dt2;
@@ -128,12 +130,14 @@ namespace mo_lb3_huk
                     {
                         dt1 = dt2;
                     }
+                    
                 }
                 string output = string.Format("{0:f5} | {1:f5} | {2:f5} | {3:f5} | {4:f5}", dt1.X1, dt1.X2, h1, h2, f(dt1));
                 Console.WriteLine(output);
+                i += 1;
             }
             while (h1 > e && h2 > e);
-            Console.WriteLine("Ответ: " + dt1.Output());
+            Console.WriteLine("Ответ: " + dt1.Output() );
             Console.ReadKey();
         }
     }
