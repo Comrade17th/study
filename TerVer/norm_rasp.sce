@@ -16,3 +16,4 @@ legend('k = 6, lam = 4', 'Гистограмма')
 xgrid()
 [X] = cdfgam("X", 6,4,0.93,0.07)
 disp(X)
+
