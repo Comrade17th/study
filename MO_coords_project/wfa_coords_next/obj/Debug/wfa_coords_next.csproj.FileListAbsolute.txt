@@ -1,0 +1,11 @@
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\wfa_coords_next\bin\Debug\wfa_coords_next.exe.config
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\wfa_coords_next\bin\Debug\wfa_coords_next.exe
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\wfa_coords_next\bin\Debug\wfa_coords_next.pdb
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\wfa_coords_next\obj\Debug\wfa_coords_next.csproj.AssemblyReference.cache
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\wfa_coords_next\obj\Debug\wfa_coords_next.csproj.SuggestedBindingRedirects.cache
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\wfa_coords_next\obj\Debug\wfa_coords_next.Form1.resources
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\wfa_coords_next\obj\Debug\wfa_coords_next.Properties.Resources.resources
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\wfa_coords_next\obj\Debug\wfa_coords_next.csproj.GenerateResource.cache
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\wfa_coords_next\obj\Debug\wfa_coords_next.csproj.CoreCompileInputs.cache
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\wfa_coords_next\obj\Debug\wfa_coords_next.exe
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\wfa_coords_next\obj\Debug\wfa_coords_next.pdb

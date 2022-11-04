@@ -49,12 +49,20 @@ namespace asd_lb5_polis_deck
             string[] test = {
                 "8 9 + 1 7 - *", // - 102
                 "3 4 +", // 7
-                "7 7 /" // 1
+                "14 7 -" // 1
             };
             for (int i = 0; i < test.Length; i++)
                 Console.WriteLine($"{test[i]} = {calcPolis(test[i])}");
-            Console.ReadKey();
+            
 
+            Deque<int> ints = new Deque<int>();
+
+            for (int i = 0; i < 10; i++)
+                ints.PushFront(i);
+
+            for (int i = 0; i < 10; i++)
+                Console.WriteLine(ints.PopBack());
+            Console.ReadKey();
         }
     }
 }

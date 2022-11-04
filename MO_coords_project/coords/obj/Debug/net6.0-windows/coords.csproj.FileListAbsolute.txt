@@ -1,0 +1,17 @@
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\coords\bin\Debug\net6.0-windows\coords.exe
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\coords\bin\Debug\net6.0-windows\coords.deps.json
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\coords\bin\Debug\net6.0-windows\coords.runtimeconfig.json
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\coords\bin\Debug\net6.0-windows\coords.dll
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\coords\bin\Debug\net6.0-windows\coords.pdb
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\coords\obj\Debug\net6.0-windows\coords.csproj.AssemblyReference.cache
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\coords\obj\Debug\net6.0-windows\coords.Form1.resources
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\coords\obj\Debug\net6.0-windows\coords.csproj.GenerateResource.cache
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\coords\obj\Debug\net6.0-windows\coords.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\coords\obj\Debug\net6.0-windows\coords.AssemblyInfoInputs.cache
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\coords\obj\Debug\net6.0-windows\coords.AssemblyInfo.cs
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\coords\obj\Debug\net6.0-windows\coords.csproj.CoreCompileInputs.cache
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\coords\obj\Debug\net6.0-windows\coords.dll
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\coords\obj\Debug\net6.0-windows\refint\coords.dll
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\coords\obj\Debug\net6.0-windows\coords.pdb
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\coords\obj\Debug\net6.0-windows\coords.genruntimeconfig.cache
+C:\Users\Comrade\Desktop\Учеба\study\MO_coords_project\coords\obj\Debug\net6.0-windows\ref\coords.dll

@@ -57,6 +57,24 @@ namespace asd_lb3_v6
                     current = current.Next;
                 }
             }
+            public void PrintLine()
+            {
+                Node<T> current = head;
+                while (current != null)
+                {
+                    Console.Write($"{current.Data}");
+                    current = current.Next;
+                }
+                Console.WriteLine();
+            }
+
+            //
+
+            public void RemoveLast()
+            {
+                tail = tail.Previous;
+                tail.Next = null;
+            }
 
             // удаление элемента
             public bool Remove(T data)
@@ -187,6 +205,7 @@ namespace asd_lb3_v6
 
         static void Main(string[] args)
         {
+            
             LinkedList<int> words = new LinkedList<int>();
             int[] nums = { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 };
             //int[] input = words.Split();
@@ -237,10 +256,52 @@ namespace asd_lb3_v6
                 }
 
                 Menu();
+                
                 choose = Convert.ToInt32(Console.ReadLine());
                 Console.Clear();
             }
-        }
+
+            
+
+            //Для решения задачи сформируйте двунаправленный список с символьным
+            //информационным полем применяя Класс LinkedList<T>.
+            //Программа в цикле запрашивает ввести
+            //с клавиатуры буквы латинского алфавита.
+            //Ввод символов заканчивается,
+            //в случае если пользователь вводит «.».
+            //Среди вводимых символов могут встречаться не буквы,
+            //появление которого означает отмену предыдущего символа.
+            //Учитывая вхождение этого символа, сформируйте последовательность 
+
+
+
+            /*
+            for (int i = 32; i < 127; i++)
+            {
+                Console.Write($"|{(char)i}-{i}| ");
+                if (i != 32 && i % 8 == 0)
+                    Console.WriteLine();
+            }
+            */
+            // 65 - 90 A-Z
+            // 97 - 122 a-z
+            LinkedList<char> symbols = new LinkedList<char>();
+            bool loop = true;
+            while(loop)
+            {
+                char input = Console.ReadLine()[0];
+                if ((input >= 65 && input <= 90) ||(input >= 97 && input <= 122))
+                {
+                    symbols.Add(input);
+                }
+                else
+                {
+                    symbols.RemoveLast();
+                }
+                symbols.PrintLine();
+            }
+            Console.ReadKey();
+        }// предложения
 
     }
 }

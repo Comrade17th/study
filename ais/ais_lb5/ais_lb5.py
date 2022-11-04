@@ -13,7 +13,7 @@ for i in text: # coding text
         res += alphabet[new_symbol%len(alphabet)]
     else:
         res += i
-
+print(res)
 isLoop = True
 res_ =""
 tries = 1

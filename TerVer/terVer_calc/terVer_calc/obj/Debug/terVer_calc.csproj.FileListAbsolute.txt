@@ -1,0 +1,7 @@
+C:\Users\Cheburashka\Desktop\uni\study\TerVer\terVer_calc\terVer_calc\bin\Debug\terVer_calc.exe.config
+C:\Users\Cheburashka\Desktop\uni\study\TerVer\terVer_calc\terVer_calc\bin\Debug\terVer_calc.exe
+C:\Users\Cheburashka\Desktop\uni\study\TerVer\terVer_calc\terVer_calc\bin\Debug\terVer_calc.pdb
+C:\Users\Cheburashka\Desktop\uni\study\TerVer\terVer_calc\terVer_calc\obj\Debug\terVer_calc.csproj.AssemblyReference.cache
+C:\Users\Cheburashka\Desktop\uni\study\TerVer\terVer_calc\terVer_calc\obj\Debug\terVer_calc.csproj.CoreCompileInputs.cache
+C:\Users\Cheburashka\Desktop\uni\study\TerVer\terVer_calc\terVer_calc\obj\Debug\terVer_calc.exe
+C:\Users\Cheburashka\Desktop\uni\study\TerVer\terVer_calc\terVer_calc\obj\Debug\terVer_calc.pdb
