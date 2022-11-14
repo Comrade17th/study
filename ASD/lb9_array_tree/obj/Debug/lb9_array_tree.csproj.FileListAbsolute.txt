@@ -1,0 +1,8 @@
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb9_array_tree\bin\Debug\lb9_array_tree.exe.config
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb9_array_tree\bin\Debug\lb9_array_tree.exe
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb9_array_tree\bin\Debug\lb9_array_tree.pdb
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb9_array_tree\obj\Debug\lb9_array_tree.csproj.AssemblyReference.cache
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb9_array_tree\obj\Debug\lb9_array_tree.csproj.SuggestedBindingRedirects.cache
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb9_array_tree\obj\Debug\lb9_array_tree.csproj.CoreCompileInputs.cache
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb9_array_tree\obj\Debug\lb9_array_tree.exe
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb9_array_tree\obj\Debug\lb9_array_tree.pdb
