@@ -6,13 +6,23 @@ using System.Threading.Tasks;
 
 namespace layer_list
 {
-    internal class Node<T>
+    internal class Node
     {
-        public Node(T data)
+        string name, phone;
+        public Node(string name, string phone)
         {
-            Data = data;
+            this.name = name;
+            this.phone = phone;
         }
-        public T Data { get; set; }
-        public Node<T> Next { get; set; }
+        public string Name { get { return name; } set { name = value; } }
+        public string Phone { get { return phone; } set { name = value; } }
+        public Node Next { get; set; }
+        public Node Next2 { get; set; }
+
+        public string GetInfo()
+        {
+            return ($"{Name} {Phone}");
+        }
+
     }
 }
