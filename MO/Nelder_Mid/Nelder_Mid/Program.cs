@@ -30,6 +30,7 @@ namespace Nelder_Mid
             {
                 Console.WriteLine($"{dot.X} {dot.Y} {dot.fun}");
             }
+            Console.WriteLine((dt1 - dt2).GetInfo());
             Console.ReadKey();
         }
     }
