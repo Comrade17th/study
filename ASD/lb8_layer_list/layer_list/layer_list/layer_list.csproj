@@ -43,7 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
+    <Compile Include="Layer_list.cs" />
+=======
     <Compile Include="LayerList.cs" />
+>>>>>>> f6420b70e30041557cd029f83c15c96b0a3383b1
     <Compile Include="Node.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
