@@ -13,6 +13,8 @@ namespace Nelder_Mid
 {
     public partial class Form1 : Form
     {
+        
+        int clicks = 0;
         public Form1()
         {
             InitializeComponent();
@@ -22,24 +24,63 @@ namespace Nelder_Mid
         {
             main_chart();
         }
+        
 
         private void main_chart()
         {
-            Dot dt1 = new Dot(0, 5);
-            Dot dt2 = new Dot(2, 4);
-            Dot dt3 = new Dot(3, 1);
+            Dot dt1 = new Dot(2, 4);
+            Dot dt2 = new Dot(5, 3);
+            Dot dt3 = new Dot(7, 9);
             Triangle smp = new Triangle(dt1, dt2, dt3);
-            smp.Sort();
-            AddTriangle(smp);
-            smp.Srink();
-            AddTriangle(smp);
+
+
             //AddPoint(smp.GetDotMiddle());
             //AddPoint(smp.GetDotReflected());
             //AddPoint(smp.GetDotExpended());
             //AddPoint(smp.GetDotContracted());
+
+            while (smp.isEnd() != true)
+            {
+                smp.Sort();
+                DrawTriangle(smp);
+                DrawPoint(smp.GetDotMiddle());
+                DrawLine(smp.GetDotReflected(), smp.GetDotMiddle()); 
+                if(smp.GetDotReflected().fun < smp.dots[0].fun)
+                {
+                    DrawLine(smp.GetDotReflected(), smp.GetDotExpended());
+                    if(smp.GetDotExpended().fun < smp.dots[0].fun)
+                    {
+                        smp.dots[0] = smp.GetDotExpended();
+                    }
+                    else
+                    {
+                        smp.dots[2] = smp.GetDotReflected();
+                    }
+                }
+                else
+                {
+                    if(smp.GetDotReflected().fun <= smp.dots[0].fun)
+                    {
+                        smp.dots[2] = smp.GetDotReflected();
+                    }
+                    else
+                    {
+                        if(smp.GetDotReflected().fun <= smp.dots[2].fun)
+                        {
+                            DrawLine(smp.GetDotContracted(), smp.GetDotMiddle());
+                            smp.dots[2] = smp.GetDotContracted();
+                        }
+                        else
+                        {
+                            smp.Srink();
+                        }
+                    }
+                }
+            }
+            richTextBox1.Text = smp.GetFullInfo();
         }
 
-        private void AddPoint(Dot dt)
+        private void DrawPoint(Dot dt)
         {
             chart1.Series[0].Points.AddXY(dt.X, dt.Y);
         }
@@ -49,7 +90,7 @@ namespace Nelder_Mid
             sr.Points.AddXY(dt.X, dt.Y);
         }
 
-        private void AddLine(Dot dt1, Dot dt2)
+        private void DrawLine(Dot dt1, Dot dt2)
         {
             chart1.Series.Add(new System.Windows.Forms.DataVisualization.Charting.Series());
             int i = chart1.Series.Count() - 1;
@@ -59,7 +100,7 @@ namespace Nelder_Mid
             AddPointToSeires(dt2, chart1.Series[i]);
         }
 
-        private void AddTriangle(Triangle smp)
+        private void DrawTriangle(Triangle smp)
         {
             chart1.Series.Add(new System.Windows.Forms.DataVisualization.Charting.Series());
             int i = chart1.Series.Count() - 1;
@@ -91,6 +132,13 @@ namespace Nelder_Mid
                 if (dots[i].X > maxDot.X)
                     maxDot = dots[i];
             return maxDot;
+        }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+
+            chart1.Series.RemoveAt(0);
+            clicks++;
         }
     }
 }

@@ -1,19 +1,18 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-//using static System.Math;
 
-namespace Nelder_Mid
+namespace WFA_nelder_mid
 {
-    
-    class Program
+    internal static class Program
     {
-        
-
-        static void Main(string[] args)
+        /// <summary>
+        /// Главная точка входа для приложения.
+        /// </summary>
+        [STAThread]
+        static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);

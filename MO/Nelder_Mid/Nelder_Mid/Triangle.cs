@@ -9,7 +9,7 @@ namespace Nelder_Mid
     internal class Triangle
     {
         double alfa = 1, beta = 0.5, gamma = 2;
-        double eps = 0.01;
+        double eps = 0.001;
         public Dot[] dots = new Dot[3];
         public Triangle()
         {
@@ -72,6 +72,25 @@ namespace Nelder_Mid
                 return true;
             else
                 return false;
+        }
+
+        public bool isEndBest()
+        {
+            if (dots[0].fun < eps)
+                return true;
+            else
+                return false;
+        }
+
+        public string GetFullInfo()
+        {
+            
+            string res = "";
+            res += $"Best X: {Math.Round(dots[0].X, 5)} Y: {Math.Round(dots[0].Y,5)} F: {Math.Round(dots[0].fun, 5)}\n";
+            res += $"Good X: {Math.Round(dots[1].X, 5)} Y: {Math.Round(dots[1].Y,5)} F: {Math.Round(dots[1].fun,5)}\n";
+            res += $"Worst X: {Math.Round(dots[2].X, 5)} Y: {Math.Round(dots[2].Y,5)} F: {Math.Round(dots[2].fun,5)}\n";
+            res += $"Square: {Math.Round(Square, 5)} Eps: {Math.Round(eps,5)}\n";
+            return res;
         }
     }
 }
