@@ -59,5 +59,23 @@ namespace Nelder_Mid
         {
             return new Dot { x = dot1.x - dot2.x, y = dot1.y - dot2.y };
         }
+
+        public static Dot operator *(Dot dot1, int num)
+        {
+            return new Dot { x = dot1.x *num, y = dot1.y * num };
+        }
+        public static Dot operator *(int num, Dot dot1)
+        {
+            return new Dot { x = dot1.x * num, y = dot1.y * num };
+        }
+
+        public static Dot operator *(Dot dot1, double num)
+        {
+            return new Dot { x = dot1.x * num, y = dot1.y * num };
+        }
+        public static Dot operator *(double num, Dot dot1)
+        {
+            return new Dot { x = dot1.x * num, y = dot1.y * num };
+        }
     }
 }
