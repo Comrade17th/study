@@ -1,0 +1,15 @@
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb8_layer_list\layer_list\layer_list\obj\Debug\layer_list.csproj.AssemblyReference.cache
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb8_layer_list\layer_list\layer_list\obj\Debug\layer_list.csproj.SuggestedBindingRedirects.cache
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb8_layer_list\layer_list\layer_list\obj\Debug\layer_list.csproj.CoreCompileInputs.cache
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb8_layer_list\layer_list\layer_list\bin\Debug\layer_list.exe.config
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb8_layer_list\layer_list\layer_list\bin\Debug\layer_list.exe
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb8_layer_list\layer_list\layer_list\bin\Debug\layer_list.pdb
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb8_layer_list\layer_list\layer_list\obj\Debug\layer_list.exe
+C:\Users\Comrade\Desktop\Учеба\study\ASD\lb8_layer_list\layer_list\layer_list\obj\Debug\layer_list.pdb
+C:\Users\Cheburashka\Desktop\uni\study\ASD\lb8_layer_list\lb8_layer_list\layer_list\layer_list\bin\Debug\layer_list.exe.config
+C:\Users\Cheburashka\Desktop\uni\study\ASD\lb8_layer_list\lb8_layer_list\layer_list\layer_list\bin\Debug\layer_list.exe
+C:\Users\Cheburashka\Desktop\uni\study\ASD\lb8_layer_list\lb8_layer_list\layer_list\layer_list\bin\Debug\layer_list.pdb
+C:\Users\Cheburashka\Desktop\uni\study\ASD\lb8_layer_list\lb8_layer_list\layer_list\layer_list\obj\Debug\layer_list.csproj.AssemblyReference.cache
+C:\Users\Cheburashka\Desktop\uni\study\ASD\lb8_layer_list\lb8_layer_list\layer_list\layer_list\obj\Debug\layer_list.csproj.CoreCompileInputs.cache
+C:\Users\Cheburashka\Desktop\uni\study\ASD\lb8_layer_list\lb8_layer_list\layer_list\layer_list\obj\Debug\layer_list.exe
+C:\Users\Cheburashka\Desktop\uni\study\ASD\lb8_layer_list\lb8_layer_list\layer_list\layer_list\obj\Debug\layer_list.pdb
