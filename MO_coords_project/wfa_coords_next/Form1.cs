@@ -114,10 +114,11 @@ namespace wfa_coords_next
             double borderDt = 1;
             Dot result = dt;
             Random r = random;
-            result.X += Round(GetRandomNumberInRange(r, 0 + borderDt, 2 * Xdt) - Xdt, 2);
-            result.Y += Round(GetRandomNumberInRange(r, 0 + borderDt, 2 * Ydt - borderDt) - Ydt, 2);
-            //result.X = Round(result.X, 2);
-            //result.Y = Round(result.Y, 2);
+            result.X += GetRandomNumberInRange(r, borderDt, Xdt - borderDt);
+            result.Y += GetRandomNumberInRange(r, borderDt, Ydt - borderDt);
+
+            result.X = Round(result.X, 2);
+            result.Y = Round(result.Y, 2);
             return result;
         }
 
@@ -125,9 +126,9 @@ namespace wfa_coords_next
         {
             double Ymain;
             double Xmain;
-            int dtCount = 1;
+            int dtCount = 0;
             Random random = new Random();
-            this.chart1.Series.Add(new System.Windows.Forms.DataVisualization.Charting.Series());
+            //this.chart1.Series.Add(new System.Windows.Forms.DataVisualization.Charting.Series());
             for (int i = 0; i < matrix.size; i++ ) // идем по Y
             {
                 Ymain = Ystart + i * Ydt;
@@ -154,7 +155,7 @@ namespace wfa_coords_next
 
         private void ChangeChartSize()
         {
-            this.chart1.Series.Add(new System.Windows.Forms.DataVisualization.Charting.Series());
+            //this.chart1.Series.Add(new System.Windows.Forms.DataVisualization.Charting.Series());
             int extraSq = 0;
             double minX = Xstart - extraSq * Xdt;
             double minY = Ystart - extraSq * Ydt;
@@ -162,15 +163,15 @@ namespace wfa_coords_next
             chart1.ChartAreas[0].AxisX.Minimum = minX;// - 3 * Xdt;
             chart1.ChartAreas[0].AxisY.Minimum = minY;// - 3 * Ydt;
 
-            AddDotToChart(chart1, new Dot(minX + Xdt/2, minY + Ydt/2));
+            //AddDotToChart(chart1, new Dot(minX + Xdt/2, minY + Ydt/2));
 
             double maxX = minX + (matrix.size + extraSq) * Xdt;
             double maxY = minY + (matrix.size + extraSq)* Ydt;
             richTextBox2.Text += ($"{maxX} {maxY}\n");
-            chart1.ChartAreas[0].AxisX.Maximum = maxX;
-            chart1.ChartAreas[0].AxisX.Maximum = maxY;
+            //chart1.ChartAreas[0].AxisX.Maximum = maxX;
+           // chart1.ChartAreas[0].AxisX.Maximum = maxY;
 
-            AddDotToChart(chart1, new Dot(maxX - Xdt / 2, maxY - Ydt / 2));
+            //AddDotToChart(chart1, new Dot(maxX - Xdt / 2, maxY - Ydt / 2));
 
             chart1.ChartAreas[0].AxisX.Interval = Xdt;
             chart1.ChartAreas[0].AxisY.Interval = Ydt;
@@ -179,18 +180,19 @@ namespace wfa_coords_next
 
         private void AddDotToChart(System.Windows.Forms.DataVisualization.Charting.Chart chart, Dot dt)
         {
-            chart.Series[1].Points.AddXY(dt.X, dt.Y);
-            chart.Series[1].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
-            chart.Series[1].BorderColor = System.Drawing.Color.Blue;
+            chart.Series[0].Points.AddXY(dt.X, dt.Y);
+            chart.Series[0].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            chart.Series[0].BorderColor = System.Drawing.Color.Blue;
         }
 
         private void button_start_Click(object sender, EventArgs e)
         {
+            chart1.Series[0].Points.Clear();
             ChangeChartSize();
             richTextBox1.Text = matrix.GetInfo(" ");
             
             
-            //FillField();
+            FillField();
         }
     }
 }

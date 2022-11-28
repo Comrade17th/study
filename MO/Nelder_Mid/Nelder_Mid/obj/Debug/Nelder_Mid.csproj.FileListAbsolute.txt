@@ -6,3 +6,5 @@ C:\Users\Comrade\Desktop\Учеба\study\MO\Nelder_Mid\Nelder_Mid\obj\Debug\Nel
 C:\Users\Comrade\Desktop\Учеба\study\MO\Nelder_Mid\Nelder_Mid\obj\Debug\Nelder_Mid.csproj.CoreCompileInputs.cache
 C:\Users\Comrade\Desktop\Учеба\study\MO\Nelder_Mid\Nelder_Mid\obj\Debug\Nelder_Mid.exe
 C:\Users\Comrade\Desktop\Учеба\study\MO\Nelder_Mid\Nelder_Mid\obj\Debug\Nelder_Mid.pdb
+C:\Users\Comrade\Desktop\Учеба\study\MO\Nelder_Mid\Nelder_Mid\obj\Debug\Nelder_Mid.Form1.resources
+C:\Users\Comrade\Desktop\Учеба\study\MO\Nelder_Mid\Nelder_Mid\obj\Debug\Nelder_Mid.csproj.GenerateResource.cache
