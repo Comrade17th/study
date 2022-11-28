@@ -29,7 +29,7 @@ namespace layer_list
     {
         static void Main(string[] args)
         {
-            string names_text = "Мария Даниэль Стефания Игорь Диана Артём Дмитрий Глеб Пётр";
+            string names_text = "Мария Даниэль Артем Борис Виктор Стефания Игорь Диана Артём Дмитрий Глеб Пётр";
             
             string[] names = names_text.Split();
             int names_count = names.Length;
@@ -38,27 +38,31 @@ namespace layer_list
 
             for(int i = 0; i < names_count; i++)
             {
-                list.AddSort(names[i], $"{i + 8000}");
+                list.AddSort(names[i], $"{i + 8000000}");
+                Console.WriteLine(names[i]);
+                list.Print();
             }
             Console.WriteLine("Созданный список");
             list.Print();
+
+            Console.WriteLine("Поиск");
+            for (int i = 0; i < names_count; i++)
+            {
+                Console.WriteLine($"{names[i]} Индеск: " + list.Contains(names[i], ""));
+            }
 
             Console.WriteLine("Удаление элемента");
             list.Remove("Глеб", "");
             Console.WriteLine("Список после изменения");
             list.Print();
 
-            Console.WriteLine("Поиск");
-            for(int i = 0; i < names_count; i++)
-            {
-                Console.WriteLine($"{names[i]} Индеск: " + list.Contains(names[i], ""));
-            }
+            
 
             Console.WriteLine("Удаление списка");
             list.Clear();
             Console.WriteLine("Список после изменения");
             list.Print();
-
+            
             Console.ReadKey();
 
         }
