@@ -17,7 +17,15 @@ namespace wfa_coords_next
         int i_ = 0;
         Dot dt1 = new Dot(-2, -2);
         Dot dt2 = new Dot(-2, 2);
-        Matrix matrix = new Matrix(6);
+        static int[,] arr = new int[,] {
+            {7, 2, 0, 0, 0, 0},
+            { 0, 27, 33, 0, 0, 0},
+            { 0, 0, 32, 49, 7, 0 },
+            { 0, 0, 10, 11, 2, 6},
+            { 0, 0, 0, 9, 7, 3 }
+        };
+        //Matrix matrix = new Matrix(6);
+        Matrix matrix = new Matrix();
         double Xstart = 60; // 60-65 65-70 ...
         double Ystart = 160; // 160-170, 170-180 ...
         double Xdt = 5;
@@ -25,6 +33,8 @@ namespace wfa_coords_next
         public class Matrix
         {
             public int size;
+            public int height;
+            public int width;
             public int[,] arr;
             public Matrix(int size)
             {
@@ -40,6 +50,21 @@ namespace wfa_coords_next
                     }
                 }
 
+            }
+
+            public Matrix()
+            {
+                this.arr = new int[,] {
+                    {7, 2, 0, 0, 0, 0},
+                    { 0, 27, 33, 0, 0, 0},
+                    { 0, 0, 32, 49, 7, 0 },
+                    { 0, 0, 10, 11, 2, 6},
+                    { 0, 0, 0, 9, 7, 3 },
+                    { 0, 0, 0, 0, 5, 6 }
+                };
+                height = 6;
+                size = 6;
+                width = 6;
             }
 
 
@@ -65,7 +90,12 @@ namespace wfa_coords_next
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            
+            richTextBox1.Text = 
+                "7 2 0 0 0 0\n" +
+                "0 27 33 0 0 0\n" +
+                "0 0 32 49 7 0\n" +
+                "0 0 10 11 2 6\n" +
+                "0 0 0 9 7 3\n";
 
         }
 
