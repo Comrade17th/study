@@ -50,5 +50,10 @@ namespace MisPis
                 MessageBox.Show("Поле пустое");
             }
         }
+
+        private void Login_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
