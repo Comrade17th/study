@@ -1,0 +1,11 @@
+C:\Users\Comrade\Desktop\Учеба\study\MO\TimerTest\bin\Debug\TimerTest.exe.config
+C:\Users\Comrade\Desktop\Учеба\study\MO\TimerTest\bin\Debug\TimerTest.exe
+C:\Users\Comrade\Desktop\Учеба\study\MO\TimerTest\bin\Debug\TimerTest.pdb
+C:\Users\Comrade\Desktop\Учеба\study\MO\TimerTest\obj\Debug\TimerTest.csproj.AssemblyReference.cache
+C:\Users\Comrade\Desktop\Учеба\study\MO\TimerTest\obj\Debug\TimerTest.csproj.SuggestedBindingRedirects.cache
+C:\Users\Comrade\Desktop\Учеба\study\MO\TimerTest\obj\Debug\TimerTest.Form1.resources
+C:\Users\Comrade\Desktop\Учеба\study\MO\TimerTest\obj\Debug\TimerTest.Properties.Resources.resources
+C:\Users\Comrade\Desktop\Учеба\study\MO\TimerTest\obj\Debug\TimerTest.csproj.GenerateResource.cache
+C:\Users\Comrade\Desktop\Учеба\study\MO\TimerTest\obj\Debug\TimerTest.csproj.CoreCompileInputs.cache
+C:\Users\Comrade\Desktop\Учеба\study\MO\TimerTest\obj\Debug\TimerTest.exe
+C:\Users\Comrade\Desktop\Учеба\study\MO\TimerTest\obj\Debug\TimerTest.pdb
