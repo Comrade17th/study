@@ -155,7 +155,8 @@ namespace lb9_array_tree_damn
                         top = -1;
                 }
             }
-            return RemoveDuplicates(res);
+            return (res);
+            //return RemoveDuplicates(res);
         }
 
         public static string RemoveDuplicates(string input)

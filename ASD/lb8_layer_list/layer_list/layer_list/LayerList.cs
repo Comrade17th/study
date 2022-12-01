@@ -218,9 +218,9 @@ namespace layer_list
                     if (current.Next2.Name == name || current.Next2.Phone == phone)
                         return currIndex;
                 currIndex++;
-                current = current.Next2;
+                current = current.Next2.Next;
                 
-                current = current.Next;
+                //current = current.Next;
             }
             return index;
         }

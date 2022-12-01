@@ -39,8 +39,8 @@ namespace layer_list
             for(int i = 0; i < names_count; i++)
             {
                 list.AddSort(names[i], $"{i + 8000000}");
-                Console.WriteLine(names[i]);
-                list.Print();
+                //Console.WriteLine(names[i]);
+                //list.Print();
             }
             Console.WriteLine("Созданный список");
             list.Print();

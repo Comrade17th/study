@@ -83,6 +83,15 @@ namespace wfa_coords_next
                 return result;
             }
         }
+
+        public static int GetCoef(int[,] arr)
+        {
+            int res = 0;
+
+            return res;
+        }
+
+
         public Form1()
         {
             InitializeComponent();
