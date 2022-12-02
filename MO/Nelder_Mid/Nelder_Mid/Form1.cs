@@ -22,6 +22,7 @@ namespace Nelder_Mid
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            
             //main_chart();
         }
 
@@ -37,14 +38,17 @@ namespace Nelder_Mid
             richTextBox1.Text += $"{dt1.GetInfo()}\n";
             while (loop)
             {
+                dt2 = dt1.deltaFun;
+                h = getH(dt1, dt2);
                 dt2 = dt1 - h * dt1.deltaFun;
                 //richTextBox1.Text += $"{i} dt1:{dt1.deltaFun.GetInfo()}\n";
+                /*
                 if (dt2.fun > dt1.fun)
                 {
                     h /= 2.0;
                     dt2 = dt1 - h * dt1.deltaFun;
                 }
-
+                */
                 if (dt2.eps < eps)
                 {
                     loop = false;
@@ -53,7 +57,7 @@ namespace Nelder_Mid
                     loop = false;
                 i++;
                 DrawPoint(dt2, $"Точка {i}");
-                richTextBox1.Text += $"i:{i} dt2:{dt2.GetInfo()}\n";
+                richTextBox1.Text += $"i:{i} dt2:{dt2.GetInfo()} eps= {Math.Round(dt2.eps, 5)}\n";
                 dt1 = dt2;
             }
         }
@@ -113,11 +117,12 @@ namespace Nelder_Mid
                 {
                     loop = false;
                 }
-                if (i > 10)
+                if (i > 20)
                     loop = false;
+
                 i++;
                 DrawPoint(dt2, $"Точка {i}");
-                richTextBox1.Text += $"i:{i} dt2:{dt2.GetInfo()}\n";
+                richTextBox1.Text += $"i:{i} dt2:{dt2.GetInfo()} eps= {Math.Round(dt2.eps, 5)}\n";
                 dt1 = dt2;
             }
             
