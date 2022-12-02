@@ -57,7 +57,7 @@ namespace Nelder_Mid
                     loop = false;
                 i++;
                 DrawPoint(dt2, $"Точка {i}");
-                richTextBox1.Text += $"i:{i} dt2:{dt2.GetInfo()} eps= {Math.Round(dt2.eps, 5)}\n";
+                richTextBox1.Text += $"i:{i} dt2:{dt2.GetInfo()} eps= {Math.Round(dt2.eps, 5)} h = {Math.Round(h, 5)}\n";
                 dt1 = dt2;
             }
         }
