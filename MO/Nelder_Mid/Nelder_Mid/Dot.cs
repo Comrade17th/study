@@ -12,6 +12,7 @@ namespace Nelder_Mid
         double x;
         double y;
         const double N = 13.0;
+        //const double N = 2.0;
 
         public Dot()
         {
@@ -22,6 +23,11 @@ namespace Nelder_Mid
         {
             X = x;
             Y = y;
+        }
+
+        public double n
+        {
+            get { return N; }
         }
 
         public double X
