@@ -1,0 +1,11 @@
+C:\Users\Comrade\Desktop\Учеба\study\MO\WFA_nelder_mid\bin\Debug\WFA_nelder_mid.exe.config
+C:\Users\Comrade\Desktop\Учеба\study\MO\WFA_nelder_mid\bin\Debug\WFA_nelder_mid.exe
+C:\Users\Comrade\Desktop\Учеба\study\MO\WFA_nelder_mid\bin\Debug\WFA_nelder_mid.pdb
+C:\Users\Comrade\Desktop\Учеба\study\MO\WFA_nelder_mid\obj\Debug\WFA_nelder_mid.csproj.AssemblyReference.cache
+C:\Users\Comrade\Desktop\Учеба\study\MO\WFA_nelder_mid\obj\Debug\WFA_nelder_mid.csproj.SuggestedBindingRedirects.cache
+C:\Users\Comrade\Desktop\Учеба\study\MO\WFA_nelder_mid\obj\Debug\WFA_nelder_mid.Form1.resources
+C:\Users\Comrade\Desktop\Учеба\study\MO\WFA_nelder_mid\obj\Debug\WFA_nelder_mid.Properties.Resources.resources
+C:\Users\Comrade\Desktop\Учеба\study\MO\WFA_nelder_mid\obj\Debug\WFA_nelder_mid.csproj.GenerateResource.cache
+C:\Users\Comrade\Desktop\Учеба\study\MO\WFA_nelder_mid\obj\Debug\WFA_nelder_mid.csproj.CoreCompileInputs.cache
+C:\Users\Comrade\Desktop\Учеба\study\MO\WFA_nelder_mid\obj\Debug\WFA_nelder_mid.exe
+C:\Users\Comrade\Desktop\Учеба\study\MO\WFA_nelder_mid\obj\Debug\WFA_nelder_mid.pdb

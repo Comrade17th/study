@@ -22,9 +22,52 @@ namespace Nelder_Mid
 
         private void Form1_Load(object sender, EventArgs e)
         {
-            main_chart();
+            //main_chart();
         }
         
+        private void grad_post()
+        {
+            double h = 0.5;
+            double eps = 0.01;
+            Dot dt1 = new Dot(-1, -1);
+            Dot dt2;
+            bool loop = true;
+            int i = 0;
+            DrawPoint(dt1, "Начальная точка");
+            richTextBox1.Text += $"{dt1.GetInfo()}\n";
+            while (loop)
+            {
+                dt2 = dt1 - h * dt1.deltaFun;
+                //richTextBox1.Text += $"{i} dt1:{dt1.deltaFun.GetInfo()}\n";
+                if (dt2.fun > dt1.fun)
+                {
+                    h /= 2.0;
+                    dt2 = dt1 - h * dt1.deltaFun;
+                }
+
+                if (dt2.eps < eps)
+                {
+                    loop = false;
+                }
+                if (i > 10)
+                    loop = false;
+                i++;
+                DrawPoint(dt2, $"Точка {i}");
+                richTextBox1.Text += $"i:{i} dt2:{dt2.GetInfo()}\n";
+                dt1 = dt2;
+            }
+            
+        }
+
+        private void DrawPoint(Dot dt, string seriesName)
+        {
+            chart1.Series.Add(new System.Windows.Forms.DataVisualization.Charting.Series());
+            int i = chart1.Series.Count() - 1;
+            chart1.Series[i].ChartType = System.Windows.Forms.DataVisualization.Charting.SeriesChartType.Point;
+            chart1.Series[i].LegendText = seriesName;
+            AddPointToSeires(dt, chart1.Series[i]);
+            
+        }
 
         private void main_chart()
         {
@@ -139,6 +182,16 @@ namespace Nelder_Mid
 
             chart1.Series.RemoveAt(0);
             clicks++;
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            main_chart();
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            grad_post();
         }
     }
 }
