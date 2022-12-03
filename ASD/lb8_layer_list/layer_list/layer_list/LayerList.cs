@@ -46,7 +46,6 @@ namespace layer_list
                 head = node;
                 tail = head;
                 count++;
-                //int result = String.Compare(node.Name, current.Name);//  0  строки, равны // 1  node стоит после // -1 node стоит до
             }
             else
             {
