@@ -1,7 +1,8 @@
+
 import requests
 from bs4 import BeautifulSoup
 
-url = "https://auto.drom.ru/audi/"
+url = "https://reestr.nostroy.ru/"
 
 headers = {
     "Accept": "*/*",
@@ -12,5 +13,5 @@ req = requests.get(url, headers=headers)
 src = req.text
 soup = BeautifulSoup(src, "lxml")
 
-with open("index.html","w") as file:
+with open("index_reest.html","w") as file:
     file.write(src)
