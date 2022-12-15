@@ -53,10 +53,6 @@ with open("index.html") as file:
 #print(src)
 
 soup = BeautifulSoup(src, "lxml")
-title = soup.title
-print(title)
-print(title.text)
-
 res = soup.find_all("a", attrs={"data-ftid": "bulls-list_bull"})
 write_res(res)
     #print(item.text)
