@@ -89,14 +89,28 @@ namespace MisPis
                 $"Values({result}, {total_goal}, '{names[1]}', '{names[2]}', '{names[0]}')";
             SqlCommand cmd = new SqlCommand(querystring, db.GetConnection());
             db.openConnection();
+
+            int mark = 2;
+            double res = (double)result /(double) total_goal;
+            if (res * 100 < 60)
+                mark = 2;
+            else
+            if (res * 100 >= 60 && res * 100 < 72)
+                mark = 3;
+            else
+            if (res * 100 >= 72 && res * 100 <= 93)
+                mark = 4;
+            else
+                mark = 5;
             if (cmd.ExecuteNonQuery() == 1)
-                MessageBox.Show($"Ваш ответ сохранен\nВаш результат: {result}/{total_goal}");
+                MessageBox.Show($"Ваш ответ сохранен\nВаш результат: {result}/{total_goal}\nВаша оценка {mark}");
             else
                 MessageBox.Show("Ваш не удалось сохранить");
             db.closeConnection();
             Main main = new Main();
             this.Hide();
             main.ShowDialog();
+            //main.Main_Load();
             this.Close();
         }
 
@@ -113,6 +127,11 @@ namespace MisPis
         private void button_end_Click(object sender, EventArgs e)
         {
             testEnded();
+        }
+
+        private void Test_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }

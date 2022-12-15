@@ -11,7 +11,7 @@ namespace MisPis
     {
 
         SqlConnection sqlConnection = new SqlConnection(@"Data Source=DESKTOP-8AH9BLU;Initial Catalog=MisPis;Integrated Security=True");
-
+        //SqlConnection sqlConnection = new SqlConnection(@"Data Source=.;Initial Catalog=MisPis;Integrated Security=True");
         public void openConnection()
         {
             if(sqlConnection.State == System.Data.ConnectionState.Closed)
