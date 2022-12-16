@@ -1,9 +1,10 @@
 from bs4 import  BeautifulSoup
 import re
+import requests
 import text_split as ts
 import csv
 
-def  write_res(res):
+def write_to_csv_file(data):
     with open(f"data/audinew.csv", "w", newline='') as file:
         writer = csv.writer(file)
         writer.writerow(
@@ -15,24 +16,10 @@ def  write_res(res):
              "топливо",
              "КПП",
              "Привод",
-             "Пробег тыс.км.",
+             #"Пробег тыс.км.",
              "Цена",)
         )
-    for item in res:
-        bull_title = item.find("span", attrs={"data-ftid": "bull_title"})
-        cort1 = ts.mark_model_year(bull_title.text)
-        bull_info = item.find_all("span", attrs={"data-ftid": "bull_description-item"})
-        bull_price = item.find("span", attrs = {"data-ftid": "bull_price"}).text
-        cort1 += ts.value_hp(bull_info[0].text)
-        cort = (
-            ts.get_clear(bull_info[1].text),
-            ts.get_clear(bull_info[2].text),
-            ts.get_clear(bull_info[3].text),
-            ts.get_clear(bull_info[4].text)
-        )
-        cort1 += cort
-        print(cort1)
-
+    for cort1 in data:
         with open(f"data/audinew.csv", "a", newline='') as file:
             writer = csv.writer(file)
             writer.writerow(
@@ -44,9 +31,61 @@ def  write_res(res):
                  cort1[5],
                  cort1[6],
                  cort1[7],
-                 cort1[8],
-                 bull_price)
+                 cort1[8],)
+                 #cort1[9],)
             )
+
+def item_to_cort1(item):
+    bull_title = item.find("span", attrs={"data-ftid": "bull_title"})
+    cort1 = ts.mark_model_year(bull_title.text)
+    bull_info = item.find_all("span", attrs={"data-ftid": "bull_description-item"})
+    bull_price = item.find("span", attrs={"data-ftid": "bull_price"}).text
+    bull_price = ts.clear_price(bull_price)
+    cort1 += ts.value_hp(bull_info[0].text)
+    cort = (
+        ts.get_clear(bull_info[1].text),
+        ts.get_clear(bull_info[2].text),
+        ts.get_clear(bull_info[3].text),
+        #ts.get_clear(bull_info[4].text),
+        bull_price
+    )
+    cort1 += cort
+    return cort1
+
+def  write_res(res):
+    data = []
+
+    for item in res:
+
+        cort1 = item_to_cort1(item)
+        #print(cort1)
+        data.append(cort1)
+
+    print("page_ended")
+    return data
+
+def url_to_res(URL):
+    headers = {
+        "Accept": "*/*",
+        "User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:107.0) Gecko/20100101 Firefox/107.0"
+    }
+    req = requests.get(URL, headers=headers)
+    src = req.text
+    soup = BeautifulSoup(src, "lxml")
+    res = soup.find_all("a", attrs={"data-ftid": "bulls-list_bull"})
+    return res
+def get_data():
+    URL = "https://auto.drom.ru/audi/all/page"
+    data = []
+    i = 1
+    max = 20
+    while(i < max):
+        URL_tmp = URL + str(i)+"/"
+        data += write_res(url_to_res(URL_tmp))
+        i+=1
+    write_to_csv_file(data)
+    return data
+
 
 with open("index.html") as file:
     src = file.read();
@@ -54,5 +93,8 @@ with open("index.html") as file:
 
 soup = BeautifulSoup(src, "lxml")
 res = soup.find_all("a", attrs={"data-ftid": "bulls-list_bull"})
-write_res(res)
+data = write_res(res)
+
+
+
     #print(item.text)
