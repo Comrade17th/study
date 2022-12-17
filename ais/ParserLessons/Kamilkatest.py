@@ -16,7 +16,10 @@ res = requests.get('https://i.rts-tender.ru/main/auction/Trade/Search.aspx?jqGri
 
 result = res.json()
 
-for i in range (len(result['rows'][0]['cell'])):
+for i in range (len(result['rows'])): # итерирование по строкам
     print(i)
-    print(result['rows'][0]['cell'][i])
+    print(result['rows'][i]['cell'])
 
+for i in range (len(result['rows'][0]['cell'])): #
+    print(i)
+    print(result['rows'][0]['cell'][i]) # итерирование по столбцам (ячейкам)
