@@ -3,19 +3,70 @@ import tkinter.ttk
 
 import main
 
+def loadTxt(frame_filters):
+    text_box = []
+    labels = []
+    heads = ["Марка",
+             "Модель",
+             "Год выпуска",
+             "Объем двигателя л.",
+             "л.с.",
+             "топливо",
+             "КПП",
+             "Привод",
+             # "Пробег тыс.км.",
+             "Цена"]
+    iterator = 0
+    for name in heads:
+        text_box.append(tk.Entry(frame_filters, width=15))
+        labels.append(tk.Label(frame_filters, text = name))
+        labels[iterator].pack()
+        text_box[iterator].pack()
+        iterator +=1
+    return text_box
+
+def filter_data(text_box, data):
+    data_tmp = data
+    data_res = []
+
+    for i in range(len(text_box)):
+        for row in data_tmp:
+            if text_box[i].get() != '':
+                if text_box[i].get() in str(row[i]):
+                    data_res.append(row)
+            else:
+                data_res.append(row)
+        data_tmp = data_res
+        data_res = []
+    data_res = data_tmp
+    for row in data_res:
+        print(row)
+    return data_res
+
+def update_tree(tree, data, text_boxes):
+    tree.delete(*tree.get_children())
+    data = filter_data(text_boxes, data)
+    for comp in data:
+        tree.insert("", 'end', values=comp)
 
 def mainFrames(window, width, height):
-    frame_add_form = tk.Frame(window, height=150, width=150, bg='blue')
+    frame_filters = tk.Frame(window, height=150, width=150, bg='skyblue')
     frame_statictic = tk.Frame(window, height=150, width=150, bg='green')
     frame_table = tk.Frame(window, height=150, width=300, bg='red')
 
-    frame_add_form.place(relx=0, rely=0, relwidth=0.5, relheight=0.5)
+    frame_filters.place(relx=0, rely=0, relwidth=0.5, relheight=0.5)
     frame_statictic.place(relx=0.5, rely=0, relwidth=0.5, relheight=0.5)
     frame_table.place(relx=0, rely=0.5, relwidth=1, relheight=0.5)
 
+    data = main.get_data(2)
+    #loadTable(frame_table, main.get_data())
+    table_tree = loadTable(frame_table, data)
+    text_boxes = loadTxt(frame_filters)
+    def btn_click():
+        update_tree(table_tree, data, text_boxes)
+    btn = tk.Button(frame_statictic, text="Фильтр", width=13, font=("Arial Bold", 12), command=btn_click)
 
-    loadTable(frame_table, main.get_data())
-
+    btn.pack()
 
 
 def loadTable(frame_table, data):
@@ -33,7 +84,7 @@ def loadTable(frame_table, data):
     table['columns'] = heads #[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
     for header in heads:
         table.heading(header, text = header, anchor= 'center')
-        table.column(header, anchor='center', stretch= tk.YES, width=header.count(header))
+        table.column(header, anchor='center', stretch= tk.YES, width=len(header))
     for row in data:
         table.insert('', tk.END, values = row)
 
@@ -43,6 +94,7 @@ def loadTable(frame_table, data):
 
 
     table.pack(expand=tk.YES, fill=tk.BOTH)
+    return table
 
 def mainWindow():
     #1280 × 720

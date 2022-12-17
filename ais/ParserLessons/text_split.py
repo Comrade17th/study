@@ -25,7 +25,7 @@ def get_clear(input):
 def value_hp(input):
 
     words = re.split(" |\(",input)
-    if(len(words) >2):
+    if(len(words) >3):
         cort = (
             words[0],
             words[3]

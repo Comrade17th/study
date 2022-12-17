@@ -3,6 +3,17 @@ import re
 import requests
 import text_split as ts
 import csv
+import pandas as pd
+def read_csv_to_df():
+    df_cars = pd.read_csv("data/audinew.csv", sep = ",")
+    for row in df_cars:
+        print(row)
+    return df_cars
+
+def write_to_csv_df(data):
+    df = pd.DataFrame(data)
+    # df.to_csv('parser.csv', index=False, header=False)
+    df.to_csv(f"data/audinew.csv", index=False)
 
 def write_to_csv_file(data):
     with open(f"data/audinew.csv", "w", newline='') as file:
@@ -42,13 +53,15 @@ def item_to_cort1(item):
     bull_price = item.find("span", attrs={"data-ftid": "bull_price"}).text
     bull_price = ts.clear_price(bull_price)
     cort1 += ts.value_hp(bull_info[0].text)
-    cort = (
-        ts.get_clear(bull_info[1].text),
-        ts.get_clear(bull_info[2].text),
-        ts.get_clear(bull_info[3].text),
-        #ts.get_clear(bull_info[4].text),
-        bull_price
-    )
+    cort = ("","","","")
+    if ( len(bull_info) > 3):
+        cort = (
+            ts.get_clear(bull_info[1].text),
+            ts.get_clear(bull_info[2].text),
+            ts.get_clear(bull_info[3].text),
+            #ts.get_clear(bull_info[4].text),
+            bull_price
+        )
     cort1 += cort
     return cort1
 
@@ -74,26 +87,31 @@ def url_to_res(URL):
     soup = BeautifulSoup(src, "lxml")
     res = soup.find_all("a", attrs={"data-ftid": "bulls-list_bull"})
     return res
-def get_data():
+def get_data(count):
     URL = "https://auto.drom.ru/audi/all/page"
     data = []
     i = 1
-    max = 20
-    while(i < max):
+    while(i < count):
         URL_tmp = URL + str(i)+"/"
         data += write_res(url_to_res(URL_tmp))
         i+=1
     write_to_csv_file(data)
+    #write_to_csv_df(data)
     return data
 
 
-with open("index.html") as file:
-    src = file.read();
+if __name__ == "__main__":
+    pass
+    #get_data()
+    #read_csv_to_df()
+
+#with open("index.html") as file:
+#    src = file.read();
 #print(src)
 
-soup = BeautifulSoup(src, "lxml")
-res = soup.find_all("a", attrs={"data-ftid": "bulls-list_bull"})
-data = write_res(res)
+#soup = BeautifulSoup(src, "lxml")
+#res = soup.find_all("a", attrs={"data-ftid": "bulls-list_bull"})
+#data = write_res(res)
 
 
 
