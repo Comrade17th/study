@@ -20,8 +20,10 @@ def loadTxt(frame_filters):
     for name in heads:
         text_box.append(tk.Entry(frame_filters, width=15))
         labels.append(tk.Label(frame_filters, text = name))
-        labels[iterator].pack()
-        text_box[iterator].pack()
+        #labels[iterator].pack()
+        labels[iterator].grid(column=iterator, row=0)
+        #text_box[iterator].pack()
+        text_box[iterator].grid(column=iterator, row=1)
         iterator +=1
     return text_box
 
@@ -51,7 +53,7 @@ def update_tree(tree, data, text_boxes):
 
 def mainFrames(window, width, height):
     frame_filters = tk.Frame(window, height=150, width=150, bg='skyblue')
-    frame_statictic = tk.Frame(window, height=150, width=150, bg='green')
+    frame_statictic = tk.Frame(window, height=150, width=150, bg='#8d21bf')
     frame_table = tk.Frame(window, height=150, width=300, bg='red')
 
     frame_filters.place(relx=0, rely=0, relwidth=0.5, relheight=0.5)
