@@ -90,7 +90,22 @@ namespace MisPis
             SqlCommand cmd = new SqlCommand(querystring, db.GetConnection());
             db.openConnection();
 
+<<<<<<< HEAD
             int mark = getMark(result, total_goal);
+=======
+            int mark = 2;
+            double res = (double)result /(double) total_goal;
+            if (res * 100 < 60)
+                mark = 2;
+            else
+            if (res * 100 >= 60 && res * 100 < 72)
+                mark = 3;
+            else
+            if (res * 100 >= 72 && res * 100 <= 93)
+                mark = 4;
+            else
+                mark = 5;
+>>>>>>> 0308067dd707611fe8d83f3f267b9cd5e501a750
             if (cmd.ExecuteNonQuery() == 1)
                 MessageBox.Show($"Ваш ответ сохранен\nВаш результат: {result}/{total_goal}\nВаша оценка {mark}");
             else
@@ -99,7 +114,11 @@ namespace MisPis
 
             Main main = new Main();
             this.Hide();
+<<<<<<< HEAD
             main.Show();
+=======
+            main.ShowDialog();
+>>>>>>> 0308067dd707611fe8d83f3f267b9cd5e501a750
             //main.Main_Load();
             this.Close();
         }

@@ -9,6 +9,14 @@ input = "Audi A6 allroad quattro, 2015"
 #робот,
 #передний,
 #112 тыс. км
+
+def clear_price(price):
+    res = "";
+    words = re.split("\xa0",price)
+    for word in words:
+        res += word
+    return res
+
 def get_clear(input):
     words = re.split(" |,", input)
 
@@ -17,7 +25,7 @@ def get_clear(input):
 def value_hp(input):
 
     words = re.split(" |\(",input)
-    if(len(words) >2):
+    if(len(words) >3):
         cort = (
             words[0],
             words[3]
@@ -44,8 +52,8 @@ def mark_model_year(input):
 
 
 crt = mark_model_year(input)
-print(mark_model_year(input))
+#print(mark_model_year(input))
 input2 = "2.0 л (150 л.с.),"
 crt += value_hp(input2)
-print(value_hp(input2))
-print(crt)
+#print(value_hp(input2))
+#print(crt)
