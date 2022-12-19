@@ -43,9 +43,10 @@
             // 
             // button_start
             // 
-            this.button_start.Location = new System.Drawing.Point(22, 398);
+            this.button_start.Location = new System.Drawing.Point(29, 490);
+            this.button_start.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_start.Name = "button_start";
-            this.button_start.Size = new System.Drawing.Size(114, 40);
+            this.button_start.Size = new System.Drawing.Size(152, 49);
             this.button_start.TabIndex = 0;
             this.button_start.Text = "Начать тест";
             this.button_start.UseVisualStyleBackColor = true;
@@ -54,17 +55,19 @@
             // label_timer
             // 
             this.label_timer.AutoSize = true;
-            this.label_timer.Location = new System.Drawing.Point(194, 412);
+            this.label_timer.Location = new System.Drawing.Point(259, 507);
+            this.label_timer.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label_timer.Name = "label_timer";
-            this.label_timer.Size = new System.Drawing.Size(46, 13);
+            this.label_timer.Size = new System.Drawing.Size(58, 17);
             this.label_timer.TabIndex = 1;
             this.label_timer.Text = "Таймер";
             // 
             // button_end
             // 
-            this.button_end.Location = new System.Drawing.Point(674, 398);
+            this.button_end.Location = new System.Drawing.Point(899, 490);
+            this.button_end.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.button_end.Name = "button_end";
-            this.button_end.Size = new System.Drawing.Size(114, 40);
+            this.button_end.Size = new System.Drawing.Size(152, 49);
             this.button_end.TabIndex = 2;
             this.button_end.Text = "Закончить Тест";
             this.button_end.UseVisualStyleBackColor = true;
@@ -72,47 +75,53 @@
             // 
             // richTextBox1
             // 
-            this.richTextBox1.Location = new System.Drawing.Point(12, 12);
+            this.richTextBox1.Location = new System.Drawing.Point(16, 15);
+            this.richTextBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox1.Name = "richTextBox1";
-            this.richTextBox1.Size = new System.Drawing.Size(560, 107);
+            this.richTextBox1.Size = new System.Drawing.Size(745, 131);
             this.richTextBox1.TabIndex = 3;
             this.richTextBox1.Text = "";
             // 
             // richTextBox2
             // 
-            this.richTextBox2.Location = new System.Drawing.Point(12, 125);
+            this.richTextBox2.Location = new System.Drawing.Point(16, 154);
+            this.richTextBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox2.Name = "richTextBox2";
-            this.richTextBox2.Size = new System.Drawing.Size(560, 107);
+            this.richTextBox2.Size = new System.Drawing.Size(745, 131);
             this.richTextBox2.TabIndex = 4;
             this.richTextBox2.Text = "";
             // 
             // richTextBox3
             // 
-            this.richTextBox3.Location = new System.Drawing.Point(12, 238);
+            this.richTextBox3.Location = new System.Drawing.Point(16, 293);
+            this.richTextBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.richTextBox3.Name = "richTextBox3";
-            this.richTextBox3.Size = new System.Drawing.Size(560, 107);
+            this.richTextBox3.Size = new System.Drawing.Size(745, 131);
             this.richTextBox3.TabIndex = 5;
             this.richTextBox3.Text = "";
             // 
             // textBox1
             // 
-            this.textBox1.Location = new System.Drawing.Point(578, 52);
+            this.textBox1.Location = new System.Drawing.Point(771, 64);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(100, 20);
+            this.textBox1.Size = new System.Drawing.Size(132, 22);
             this.textBox1.TabIndex = 6;
             // 
             // textBox2
             // 
-            this.textBox2.Location = new System.Drawing.Point(578, 170);
+            this.textBox2.Location = new System.Drawing.Point(771, 209);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(100, 20);
+            this.textBox2.Size = new System.Drawing.Size(132, 22);
             this.textBox2.TabIndex = 7;
             // 
             // textBox3
             // 
-            this.textBox3.Location = new System.Drawing.Point(578, 288);
+            this.textBox3.Location = new System.Drawing.Point(771, 354);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(100, 20);
+            this.textBox3.Size = new System.Drawing.Size(132, 22);
             this.textBox3.TabIndex = 8;
             // 
             // timer1
@@ -121,9 +130,9 @@
             // 
             // Test
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1067, 554);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.textBox1);
@@ -133,8 +142,10 @@
             this.Controls.Add(this.button_end);
             this.Controls.Add(this.label_timer);
             this.Controls.Add(this.button_start);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "Test";
             this.Text = "Test";
+            this.Load += new System.EventHandler(this.Test_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
 
