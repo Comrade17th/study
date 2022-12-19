@@ -43,7 +43,7 @@ namespace MisPis
             DataTable table = new DataTable();
             names = this.Text.Split();
 
-            string querystring = $"select * from questions where type_math = '{names[1]}' and type_question = '{names[2]}'";
+            string querystring = $"select * from questions where type_math = '{names[1]}' and type_question = '{names[3]}'";
             SqlCommand command = new SqlCommand(querystring, db.GetConnection());
 
             adapter.SelectCommand = command;
@@ -60,7 +60,7 @@ namespace MisPis
                     timer_add_time += int.Parse(table.Rows[i][3].ToString());
                     total_goal = int.Parse(table.Rows[i][4].ToString());
                 }
-                ms *= timer_add_time;
+                ms *= timer_add_time * 3;
                 
                 richTextBox1.Text = questions[0];
                 richTextBox2.Text = questions[1];
@@ -90,6 +90,9 @@ namespace MisPis
             SqlCommand cmd = new SqlCommand(querystring, db.GetConnection());
             db.openConnection();
 
+<<<<<<< HEAD
+            int mark = getMark(result, total_goal);
+=======
             int mark = 2;
             double res = (double)result /(double) total_goal;
             if (res * 100 < 60)
@@ -102,18 +105,40 @@ namespace MisPis
                 mark = 4;
             else
                 mark = 5;
+>>>>>>> 0308067dd707611fe8d83f3f267b9cd5e501a750
             if (cmd.ExecuteNonQuery() == 1)
                 MessageBox.Show($"Ваш ответ сохранен\nВаш результат: {result}/{total_goal}\nВаша оценка {mark}");
             else
                 MessageBox.Show("Ваш не удалось сохранить");
             db.closeConnection();
+
             Main main = new Main();
             this.Hide();
+<<<<<<< HEAD
+            main.Show();
+=======
             main.ShowDialog();
+>>>>>>> 0308067dd707611fe8d83f3f267b9cd5e501a750
             //main.Main_Load();
             this.Close();
         }
 
+        private int getMark(int result, int total_goal)
+        {
+            int mark = 2;
+            double res = (double)result / (double)total_goal;
+            if (res * 100 < 60)
+                mark = 2;
+            else
+            if (res * 100 >= 60 && res * 100 < 72)
+                mark = 3;
+            else
+            if (res * 100 >= 72 && res * 100 <= 93)
+                mark = 4;
+            else
+                mark = 5;
+            return mark;
+        }
         private void button_start_Click(object sender, EventArgs e)
         {
             button_start.Enabled = false;

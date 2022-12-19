@@ -25,3 +25,20 @@ C:\Users\Aynur\Desktop\Учеба\3 курс\МисПис\mispis\MisPis\obj\Debu
 C:\Users\Aynur\Desktop\Учеба\3 курс\МисПис\mispis\MisPis\obj\Debug\MisPis.csproj.CoreCompileInputs.cache
 C:\Users\Aynur\Desktop\Учеба\3 курс\МисПис\mispis\MisPis\obj\Debug\MisPis.exe
 C:\Users\Aynur\Desktop\Учеба\3 курс\МисПис\mispis\MisPis\obj\Debug\MisPis.pdb
+<<<<<<< HEAD
+C:\Users\Cheburashka\Desktop\uni\study\mispis\MisPis\bin\Debug\MisPis.exe.config
+C:\Users\Cheburashka\Desktop\uni\study\mispis\MisPis\bin\Debug\MisPis.exe
+C:\Users\Cheburashka\Desktop\uni\study\mispis\MisPis\bin\Debug\MisPis.pdb
+C:\Users\Cheburashka\Desktop\uni\study\mispis\MisPis\obj\Debug\MisPis.csproj.AssemblyReference.cache
+C:\Users\Cheburashka\Desktop\uni\study\mispis\MisPis\obj\Debug\MisPis.ChooseType.resources
+C:\Users\Cheburashka\Desktop\uni\study\mispis\MisPis\obj\Debug\MisPis.Login.resources
+C:\Users\Cheburashka\Desktop\uni\study\mispis\MisPis\obj\Debug\MisPis.Main.resources
+C:\Users\Cheburashka\Desktop\uni\study\mispis\MisPis\obj\Debug\MisPis.Properties.Resources.resources
+C:\Users\Cheburashka\Desktop\uni\study\mispis\MisPis\obj\Debug\MisPis.Test.resources
+C:\Users\Cheburashka\Desktop\uni\study\mispis\MisPis\obj\Debug\MisPis.csproj.GenerateResource.cache
+C:\Users\Cheburashka\Desktop\uni\study\mispis\MisPis\obj\Debug\MisPis.csproj.CoreCompileInputs.cache
+C:\Users\Cheburashka\Desktop\uni\study\mispis\MisPis\obj\Debug\MisPis.exe
+C:\Users\Cheburashka\Desktop\uni\study\mispis\MisPis\obj\Debug\MisPis.pdb
+C:\Users\Cheburashka\Desktop\uni\study\mispis\MisPis\obj\Debug\MisPis.subUnitForm.resources
+=======
+>>>>>>> 0308067dd707611fe8d83f3f267b9cd5e501a750
