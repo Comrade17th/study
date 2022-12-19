@@ -21,7 +21,13 @@ namespace layer_list
 
         public string GetInfo()
         {
-            return ($"{Name} {Phone}");
+            string next = "null";
+            string next2 = "null";
+            if (Next != null)
+                next = Next.Name;
+            if (Next2 != null)
+                next2 = Next2.Name;
+            return ($"{Name} {Phone} ||| {next} {next2}");
         }
 
     }

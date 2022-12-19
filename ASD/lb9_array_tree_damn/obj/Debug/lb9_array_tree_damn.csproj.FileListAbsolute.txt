@@ -1,0 +1,15 @@
+C:\Users\Comrade\Desktop\Учеба\study\MO\lb9_array_tree_damn\bin\Debug\lb9_array_tree_damn.exe.config
+C:\Users\Comrade\Desktop\Учеба\study\MO\lb9_array_tree_damn\bin\Debug\lb9_array_tree_damn.exe
+C:\Users\Comrade\Desktop\Учеба\study\MO\lb9_array_tree_damn\bin\Debug\lb9_array_tree_damn.pdb
+C:\Users\Comrade\Desktop\Учеба\study\MO\lb9_array_tree_damn\obj\Debug\lb9_array_tree_damn.csproj.AssemblyReference.cache
+C:\Users\Comrade\Desktop\Учеба\study\MO\lb9_array_tree_damn\obj\Debug\lb9_array_tree_damn.csproj.SuggestedBindingRedirects.cache
+C:\Users\Comrade\Desktop\Учеба\study\MO\lb9_array_tree_damn\obj\Debug\lb9_array_tree_damn.csproj.CoreCompileInputs.cache
+C:\Users\Comrade\Desktop\Учеба\study\MO\lb9_array_tree_damn\obj\Debug\lb9_array_tree_damn.exe
+C:\Users\Comrade\Desktop\Учеба\study\MO\lb9_array_tree_damn\obj\Debug\lb9_array_tree_damn.pdb
+C:\Users\Cheburashka\Desktop\uni\study\ASD\lb9_array_tree_damn\bin\Debug\lb9_array_tree_damn.exe.config
+C:\Users\Cheburashka\Desktop\uni\study\ASD\lb9_array_tree_damn\bin\Debug\lb9_array_tree_damn.exe
+C:\Users\Cheburashka\Desktop\uni\study\ASD\lb9_array_tree_damn\bin\Debug\lb9_array_tree_damn.pdb
+C:\Users\Cheburashka\Desktop\uni\study\ASD\lb9_array_tree_damn\obj\Debug\lb9_array_tree_damn.csproj.AssemblyReference.cache
+C:\Users\Cheburashka\Desktop\uni\study\ASD\lb9_array_tree_damn\obj\Debug\lb9_array_tree_damn.csproj.CoreCompileInputs.cache
+C:\Users\Cheburashka\Desktop\uni\study\ASD\lb9_array_tree_damn\obj\Debug\lb9_array_tree_damn.exe
+C:\Users\Cheburashka\Desktop\uni\study\ASD\lb9_array_tree_damn\obj\Debug\lb9_array_tree_damn.pdb

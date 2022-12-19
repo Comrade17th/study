@@ -12,6 +12,7 @@ namespace Nelder_Mid
         double x;
         double y;
         const double N = 13.0;
+        //const double N = 2.0;
 
         public Dot()
         {
@@ -22,6 +23,11 @@ namespace Nelder_Mid
         {
             X = x;
             Y = y;
+        }
+
+        public double n
+        {
+            get { return N; }
         }
 
         public double X
@@ -37,11 +43,30 @@ namespace Nelder_Mid
 
         public string GetInfo()
         {
-            return ($"{x} {y} {fun}");
+            return ($"{Math.Round(x,3)} {Math.Round(y, 3)} {Math.Round(fun, 3)}");
         }
         public double fun
         {
             get { return N * Pow(x, 2) + N * Pow(y, 2) - N * x * y + y; ; }
+        }
+
+        public double eps
+        {
+            get
+            {
+                return Math.Sqrt(X * X + Y * Y);
+            }
+        }
+
+        public Dot deltaFun
+        {
+            get
+            {
+                Dot dot = new Dot(x, y);
+                dot.X = N * 2 * x - N * y;
+                dot.Y = N * 2 * y - N * y + 1;
+                return dot;
+            }
         }
 
         public int CompareTo(Dot dot)
@@ -58,6 +83,16 @@ namespace Nelder_Mid
         public static Dot operator -(Dot dot1, Dot dot2)
         {
             return new Dot { x = dot1.x - dot2.x, y = dot1.y - dot2.y };
+        }
+
+        public static Dot operator -(Dot dot1, int num)
+        {
+            return new Dot { x = dot1.x - num, y = dot1.y - num };
+        }
+
+        public static Dot operator -(Dot dot1, double num)
+        {
+            return new Dot { x = dot1.x - num, y = dot1.y - num };
         }
 
         public static Dot operator *(Dot dot1, int num)

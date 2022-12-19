@@ -70,63 +70,10 @@ namespace lb9_array_tree
                 return (int)(i - 1) / 2;
         }
 
-        //public static string PreOrder(string[] tree)
-        //{
-        //    string result = "";
-        //    int depth = GetDepth(tree.Count());
-        //    int i = 0; // индекс узла в массиве, на котором сидим
-        //    int vector = -1; // -1 left // 0 up // 1 right
-        //    bool loop = true;
-        //    result += tree[i]; // записываем корень
-        //    int underTreeDone = 0; 
-        //    while(loop)
-        //    {
-        //        // проверяем можно ли пойти по дереву в направлении vector и если можно, то прыгаем туда, и записываем
-        //        switch (vector)
-        //        {
-        //            case -1:
-        //                if (tree[GoLeft(i)] != "+")
-        //                {
-        //                    i = GoLeft(i);
-        //                    result += tree[i];
-        //                }
-        //                else
-        //                {
-        //                    vector = 1;
-        //                }
-        //                break;
-        //            case 1:
-        //                if (tree[GoRight(i)] != "+")
-        //                {
-        //                    i = GoRight(i);
-        //                    result += tree[i];
-        //                }
-        //                else // правая ветвь пуста, туда не прыгнуть, идем обратно
-        //                {
-        //                    vector = 0;
-        //                }
-        //                break;
-        //            case 0:
-        //                if(i == 0)
-        //                {
-        //                    loop = false;
-        //                }
-        //                else
-        //                {
-
-        //                }
-        //                break;
-        //        }
-        //    }
-
-        //    return result;
-        //}
-
-
-
         public static string PreOrder(string[] tree)
         {
             Stack<int> stack = new Stack<int>();
+            
             stack.Push(0);
             string result = "";
 
@@ -147,45 +94,61 @@ namespace lb9_array_tree
                         stack.Push(GoLeft(node));
                     }
             }
-            Console.WriteLine();
             return result;
         }
 
-
-        static void contPreOrder(Node top)
+        static string contPreOrder(string[] tree)
         {
-            Stack<Node> stack = new Stack<>();
-            while (top != null || !stack.empty())
+            Stack<int> stack = new Stack<int>();
+            int size = tree.Length;
+            int top = 0;
+            string res = "";
+            while (top != 0 || !stack.IsEmpty)
             {
-                if (!stack.empty())
+                if (!stack.IsEmpty)
                 {
-                    top = stack.pop();
+                    top = stack.Pop();
                 }
                 while (top != null)
                 {
-                    top.treatment();
-                    if (top.right != null) stack.push(top.right);
-                    top = top.left;
+                    //Console.WriteLine(tree[top]);
+                    res += tree[top];
+                    if(GoLeft(top) < size)
+                        if (tree[GoRight(top)] != "+") 
+                            stack.Push(GoRight(top));
+                    if(GoLeft(top) < size)
+                        top = GoLeft(top);
                 }
             }
+            return res;
         }
 
-        static void contPreOrder(Node top)
+        static string contInOrder(string[] tree)
         {
-            Stack<Node> stack = new Stack<>();
-            while (top != null || !stack.empty())
+            Stack< int> stack = new Stack<int>();
+            int top = 0;
+            int size = tree.Length;
+            string res = "";
+            while (top != 0 || !stack.IsEmpty)
             {
-                if (!stack.empty())
+                if (!stack.IsEmpty)
                 {
-                    top = stack.pop();
+                    top = stack.Pop();
+                    //top.treatment();
+                    res += tree[top];
+                    if(GoRight(top) < size)
+                        if (tree[GoRight(top)] != "=")
+                            top = GoRight(top);
+                    else top = 0;
                 }
-                while (top != null)
+                while (top != 0)
                 {
-                    top.treatment();
-                    if (top.right != null) stack.push(top.right);
-                    top = top.left;
+                    stack.Push(top);
+                    if (GoLeft(top) < size)
+                        top = GoLeft(top);
                 }
             }
+            return res;
         }
 
         public static string InOrder()
@@ -210,7 +173,11 @@ namespace lb9_array_tree
         static void Main(string[] args)
         {
             string input = "A1 B2 E2 C3 D3 F3 G3 +4 +4 +4 +4 +4 +4 H4 I4"; // запись вершины 3 символа 123 , 1-название, 2 уровень, 3 - левое(0) / правое (1)
-            input = "A B E C D F G + + + + + + H I";
+            //input = "A B E C D F G + + + + + + H I";
+            input = "F B G A D + I + + C E + + H +";
+            // Прямой обход: F, B, A, D, C, E, G, I, H.
+            //Центрированный обход: A, B, C, D, E, F, G, H, I.
+            //Обратный порядок: A, C, E, D, B, H, I, G, F.
             string[] tree = input.Split();
 
             //for(int i = 0; i < tree.Length; i++)
@@ -218,9 +185,10 @@ namespace lb9_array_tree
             //    Console.WriteLine(tree[i] + $"{i}");
             //}
 
-            Console.WriteLine(PreOrder(tree));
+            //Console.WriteLine(PreOrder(tree));
 
             Console.WriteLine(contPreOrder(tree));
+            Console.WriteLine(contInOrder(tree));
 
 
             Console.ReadKey();

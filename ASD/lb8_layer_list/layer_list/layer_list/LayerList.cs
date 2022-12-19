@@ -36,77 +36,100 @@ namespace layer_list
             Console.WriteLine(str);
         }
 
-        public bool AddSort(string name, string phone)
+        public void AddSort(string name, string phone)
         {
             Node node = new Node(name, phone);
             Node current = head;
-            Node previous = null;
+            //Node previous = null;
             if(head == null)
+            {
                 head = node;
+                tail = head;
+                count++;
+            }
             else
-                while (current != null)
+            {
+                bool loop = true;
+                while (current != null && loop)
                 {
-                    // добавить проверку на null
-                    int result = String.Compare(node.Name, current.Name);//  0  строки, равны // 1  node стоит после // -1 node стоит до
-                    node.Next = current.Next;
-                    node.Next2 = current.Next2;
-                    if (result == 0)
+                    int[] result = new int[2];
+                    //int result = String.Compare(node.Name, current.Name);
+                    //  0  строки, равны
+                    //  1  node стоит после
+                    // -1  node стоит до
+                    if (current == head) // проверяем окрестность головы
                     {
-                        prn($"sr{0} " + node.GetInfo() + " " + current.GetInfo());
-                        if(current.Next == null)
-                        {
-                            current.Next = node;
-                            if (previous.Next2 != null)
-                                previous.Next2 = node;
-                            return true;
-                        }
-                        else
-                        if (String.Compare(node.Name, current.Next.Name) == -1)
-                        {
-                            current.Next = node;
-                            if (previous.Next2 != null)
-                                previous.Next2 = node;
-                            return true;
-                        }
-                    }
-                    else
-                    if ( result == 1)
-                    {
-                        prn($"sr{1} " + node.GetInfo() + " " + current.GetInfo());
-                        if (current.Next == null)
-                        {
-                            current.Next = node;
-                            if (previous.Next2 != null)
-                                previous.Next2 = node;
-                            return true;
-                        }
-                        else
-                        if (String.Compare(node.Name, current.Next.Name) == -1)
-                        {
-                            current.Next = node;
-                            if(previous != null)
-                                previous.Next2 = node;
-                            return true;
-                        }
-                    }
-                    else
-                    if(result == -1)
-                    {
-                        prn($"sr{-1} " + node.GetInfo() + " " + current.GetInfo());
-                        if (previous == null)
+                        if(String.Compare(node.Name, current.Name) == -1) // можно ли вставить до
                         {
                             node.Next = head;
                             node.Next2 = head.Next;
+                            //head.Next2 = node.Next;
                             head = node;
-                            return true;
+                            
+                            loop = false;
                         }
+                        else // после головы
+                        {
+                            if(current.Next!= null)
+                            {
+                                int res = String.Compare(node.Name, current.Next.Name);
+                                if(res == -1)
+                                {
+                                    node.Next = current.Next;
+                                    node.Next2 = current.Next2;
+                                    current.Next = node;
+                                    current.Next2 = node.Next;
+                                    loop = false;
+                                }
+                                else if (current.Next2!= null)
+                                {
+                                    if (String.Compare(node.Name, current.Next2.Name) == -1)
+                                    {
+                                        node.Next = current.Next2;
+                                        node.Next2 = current.Next2.Next;
+                                        current.Next.Next = node;
+                                        current.Next.Next2 = node.Next;
+                                        current.Next2 = node;
+                                        loop=false;
+                                    }
+                                }   
+                            }
+                        }
+                        
                     }
-                        previous = current;
-                        current = current.Next;
+                    else // не голова
+                    {
+                        if (current.Next != null)
+                        {
+                            if(current.Next2 != null)
+                            {
+                                if (String.Compare(node.Name, current.Next2.Name) == -1)
+                                {
+                                    node.Next = current.Next2;
+                                    node.Next2 = current.Next2.Next;
+                                    current.Next.Next = node;
+                                    current.Next.Next2 = node.Next;
+                                    current.Next2 = node;
+                                    loop = false;
+                                }
+                            }
+                            else
+                            {
+                                current.Next.Next = node;
+                                current.Next2 = node;
+                                tail = node;
+                                loop = false;
+                            }
+                        }
+                        
                     }
-            
-            count++;
-            return true;
+                    current = current.Next;
+                }
+
+
+            }
+
+                
         }
        
 
@@ -185,7 +208,7 @@ namespace layer_list
                 if (current.Name == name || current.Phone == phone)
                     return currIndex;
                 currIndex++;
-                /*
+                
                 if (current.Next != null)
                     if (current.Next.Name == name || current.Next.Phone == phone)
                     return currIndex;
@@ -194,9 +217,9 @@ namespace layer_list
                     if (current.Next2.Name == name || current.Next2.Phone == phone)
                         return currIndex;
                 currIndex++;
-                current = current.Next2;
-                */
-                current = current.Next;
+                current = current.Next2.Next;
+                
+                //current = current.Next;
             }
             return index;
         }
