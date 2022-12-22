@@ -18,6 +18,7 @@ from django.urls import path
 from core import views
 
 urlpatterns = [
+
     path('', views.HomeListView.as_view(), name='home'),
     path('detail/<int:pk>', views.HomeDetailView.as_view(), name='detail_page'),
     path('edit-page', views.ArticleCreateView.as_view(), name='edit_page'),
@@ -26,6 +27,8 @@ urlpatterns = [
     path('login', views.MyprojectLoginView.as_view(), name='login_page'),
     path('register', views.RegisterUserView.as_view(), name='register_page'),
     path('logout', views.MyProjectLogout.as_view(), name='logout_page'),
+    path('search/', views.SearchResultsView.as_view(), name='search_results'),
+    path('like/<int:pk>', views.LikeView.as_view(), name='like'),
     
     #ajax
     path('update_comment_status/<int:pk>/<slug:type>', views.update_comment_status, name='update_comment_status')

@@ -11,6 +11,11 @@
     
     
     <p>Комментарии ({{get_article.comments_articles.all.count}})</p>
+
+
+    <form method="get" action="{% url 'like' get_article.id %}">
+        <button type="submit">Лайк ({{ likes }})</button>
+    </form>
     
     
     <hr>

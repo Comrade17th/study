@@ -1,0 +1,28 @@
+C:\Users\gylsh\OneDrive\Рабочий стол\Учеба\1 семестр (3 курс)\АСД\asd10_1\bin\Debug\netcoreapp3.1\asd10_1.exe
+C:\Users\gylsh\OneDrive\Рабочий стол\Учеба\1 семестр (3 курс)\АСД\asd10_1\bin\Debug\netcoreapp3.1\asd10_1.deps.json
+C:\Users\gylsh\OneDrive\Рабочий стол\Учеба\1 семестр (3 курс)\АСД\asd10_1\bin\Debug\netcoreapp3.1\asd10_1.runtimeconfig.json
+C:\Users\gylsh\OneDrive\Рабочий стол\Учеба\1 семестр (3 курс)\АСД\asd10_1\bin\Debug\netcoreapp3.1\asd10_1.runtimeconfig.dev.json
+C:\Users\gylsh\OneDrive\Рабочий стол\Учеба\1 семестр (3 курс)\АСД\asd10_1\bin\Debug\netcoreapp3.1\asd10_1.dll
+C:\Users\gylsh\OneDrive\Рабочий стол\Учеба\1 семестр (3 курс)\АСД\asd10_1\bin\Debug\netcoreapp3.1\asd10_1.pdb
+C:\Users\gylsh\OneDrive\Рабочий стол\Учеба\1 семестр (3 курс)\АСД\asd10_1\obj\Debug\netcoreapp3.1\asd10_1.csproj.AssemblyReference.cache
+C:\Users\gylsh\OneDrive\Рабочий стол\Учеба\1 семестр (3 курс)\АСД\asd10_1\obj\Debug\netcoreapp3.1\asd10_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\gylsh\OneDrive\Рабочий стол\Учеба\1 семестр (3 курс)\АСД\asd10_1\obj\Debug\netcoreapp3.1\asd10_1.AssemblyInfoInputs.cache
+C:\Users\gylsh\OneDrive\Рабочий стол\Учеба\1 семестр (3 курс)\АСД\asd10_1\obj\Debug\netcoreapp3.1\asd10_1.AssemblyInfo.cs
+C:\Users\gylsh\OneDrive\Рабочий стол\Учеба\1 семестр (3 курс)\АСД\asd10_1\obj\Debug\netcoreapp3.1\asd10_1.csproj.CoreCompileInputs.cache
+C:\Users\gylsh\OneDrive\Рабочий стол\Учеба\1 семестр (3 курс)\АСД\asd10_1\obj\Debug\netcoreapp3.1\asd10_1.dll
+C:\Users\gylsh\OneDrive\Рабочий стол\Учеба\1 семестр (3 курс)\АСД\asd10_1\obj\Debug\netcoreapp3.1\asd10_1.pdb
+C:\Users\gylsh\OneDrive\Рабочий стол\Учеба\1 семестр (3 курс)\АСД\asd10_1\obj\Debug\netcoreapp3.1\asd10_1.genruntimeconfig.cache
+C:\Users\Comrade\Desktop\Учеба\study\ASD\asd10_1\bin\Debug\netcoreapp3.1\asd10_1.exe
+C:\Users\Comrade\Desktop\Учеба\study\ASD\asd10_1\bin\Debug\netcoreapp3.1\asd10_1.deps.json
+C:\Users\Comrade\Desktop\Учеба\study\ASD\asd10_1\bin\Debug\netcoreapp3.1\asd10_1.runtimeconfig.json
+C:\Users\Comrade\Desktop\Учеба\study\ASD\asd10_1\bin\Debug\netcoreapp3.1\asd10_1.runtimeconfig.dev.json
+C:\Users\Comrade\Desktop\Учеба\study\ASD\asd10_1\bin\Debug\netcoreapp3.1\asd10_1.dll
+C:\Users\Comrade\Desktop\Учеба\study\ASD\asd10_1\bin\Debug\netcoreapp3.1\asd10_1.pdb
+C:\Users\Comrade\Desktop\Учеба\study\ASD\asd10_1\obj\Debug\netcoreapp3.1\asd10_1.csproj.AssemblyReference.cache
+C:\Users\Comrade\Desktop\Учеба\study\ASD\asd10_1\obj\Debug\netcoreapp3.1\asd10_1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Comrade\Desktop\Учеба\study\ASD\asd10_1\obj\Debug\netcoreapp3.1\asd10_1.AssemblyInfoInputs.cache
+C:\Users\Comrade\Desktop\Учеба\study\ASD\asd10_1\obj\Debug\netcoreapp3.1\asd10_1.AssemblyInfo.cs
+C:\Users\Comrade\Desktop\Учеба\study\ASD\asd10_1\obj\Debug\netcoreapp3.1\asd10_1.csproj.CoreCompileInputs.cache
+C:\Users\Comrade\Desktop\Учеба\study\ASD\asd10_1\obj\Debug\netcoreapp3.1\asd10_1.dll
+C:\Users\Comrade\Desktop\Учеба\study\ASD\asd10_1\obj\Debug\netcoreapp3.1\asd10_1.pdb
+C:\Users\Comrade\Desktop\Учеба\study\ASD\asd10_1\obj\Debug\netcoreapp3.1\asd10_1.genruntimeconfig.cache

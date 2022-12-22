@@ -9,7 +9,7 @@ def get_result():
     }
     payload = {
         "rows": 10,
-        "page": 1
+        "page": 2
     }
     # делаем гет запрос на json файл по адресу в network headers Request URL
     res = requests.get(

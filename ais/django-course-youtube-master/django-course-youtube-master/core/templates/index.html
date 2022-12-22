@@ -23,6 +23,8 @@
   <li class="nav-item">
       {% url 'edit_page' as url_edit_page %}
     <a class="nav-link {% if url_edit_page == request.path %}active{% endif %}" href="{{url_edit_page}}">Создание/ред/удал</a>
+
+    <form action="{% url 'search_results' %}" method="get"> <input name="q" type="text" placeholder="Search..."> </form>
   </li>
   
   

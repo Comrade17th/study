@@ -1,6 +1,6 @@
 from django.shortcuts import render,redirect,HttpResponse
 
-from .models import Articles,Comments
+from .models import Articles,Comments, Likes
 from django.views.generic import ListView, DetailView,CreateView, UpdateView,DeleteView
 from django.views.generic.edit import FormMixin
 from .forms import ArticleForm, AuthUserForm, RegisterUserForm,CommentForm
@@ -11,15 +11,27 @@ from django.contrib.auth.models import User
 from django.contrib.auth import authenticate, login
 from django.contrib.auth.mixins import LoginRequiredMixin
 from django.http import HttpResponseRedirect
-
+from django.db.models import Q
 from django.template import Context, Template
-
-
+from django.views import View
+from django.shortcuts import redirect
 class HomeListView(ListView):
     model = Articles
     template_name = 'index.html'
     context_object_name = 'list_articles'
 
+class SearchResultsView(ListView):
+    model = Articles
+    template_name = "index.html"
+    context_object_name = 'list_articles'
+
+    def get_queryset(self):  # new
+        query = self.request.GET.get("q")
+        print(f"{query=}")
+        object_list = Articles.objects.filter(
+            Q(name__icontains=query) | Q(text__icontains=query)
+        )
+        return object_list
 
 # class LoginRequiredMixin(AccessMixin):
 #     """Verify that the current user is authenticated."""
@@ -47,8 +59,13 @@ class HomeDetailView(CustomSuccessMessageMixin, FormMixin, DetailView):
     context_object_name = 'get_article'
     form_class = CommentForm
     success_msg = 'Комментарий успешно создан, ожидайте модерации'
-    
-    
+
+
+    def get_context_data(self, **kwargs):
+        context = super().get_context_data(**kwargs)
+        context['likes'] = int(Likes.objects.filter(article=kwargs.get('object')).count())
+        return context
+
     def get_success_url(self):
         return reverse_lazy('detail_page', kwargs={'pk':self.get_object().id})
     
@@ -169,7 +186,15 @@ class ArticleDeleteView(LoginRequiredMixin, DeleteView):
         self.object.delete()
         return HttpResponseRedirect(success_url)
 
-
+class LikeView(View):
+    @staticmethod
+    def get(request, pk):
+        article = Articles.objects.get(id=pk)
+        if Likes.objects.filter(article=article, user=request.user).exists():
+            Likes.objects.get(article=article, user=request.user).delete()
+        else:
+            Likes.objects.create(article=article, user=request.user).save()
+        return redirect(reverse('detail_page', args=[article.id]))
 
 
 
